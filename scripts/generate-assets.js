@@ -34,7 +34,7 @@ function writeSvg(filename, content) {
 // writeSvg('test.svg', `<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="${THEMES.light.primary}"/></svg>`);
 
 function generateHero(themeName, theme) {
-  return `<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  return `<svg viewBox="0 0 800 200" width="100%" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="grad-${themeName}" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="${theme.accent2}" stop-opacity="0.3" />
@@ -55,7 +55,7 @@ function generateHero(themeName, theme) {
 }
 
 function generateFooter(themeName, theme) {
-  return `<svg width="800" height="60" xmlns="http://www.w3.org/2000/svg">
+  return `<svg viewBox="0 0 800 60" width="100%" xmlns="http://www.w3.org/2000/svg">
     <path d="M 200,30 Q 400,60 600,30" fill="none" stroke="${theme.accent1}" stroke-width="2" stroke-dasharray="4 8" opacity="0.5"/>
     <circle cx="400" cy="45" r="4" fill="${theme.primary}"/>
     <circle cx="380" cy="35" r="2" fill="${theme.accent2}"/>
@@ -69,7 +69,7 @@ function generateFooter(themeName, theme) {
 });
 
 function generateDivider(themeName, theme) {
-  return `<svg width="800" height="40" xmlns="http://www.w3.org/2000/svg">
+  return `<svg viewBox="0 0 800 40" width="100%" xmlns="http://www.w3.org/2000/svg">
     <line x1="100" y1="20" x2="350" y2="20" stroke="${theme.accent1}" stroke-width="1" opacity="0.4"/>
     <polygon points="400,15 405,25 395,25" fill="${theme.primary}" opacity="0.8"/>
     <circle cx="380" cy="22" r="2" fill="${theme.accent2}"/>
@@ -79,7 +79,7 @@ function generateDivider(themeName, theme) {
 }
 
 function generateHeader(title, width, themeName, theme) {
-  return `<svg width="${width}" height="60" xmlns="http://www.w3.org/2000/svg">
+  return `<svg viewBox="0 0 ${width} 60" width="100%" xmlns="http://www.w3.org/2000/svg">
     <text x="20" y="40" font-family="EB Garamond, serif" font-size="28" font-weight="bold" fill="${theme.text}">
       ${title}
     </text>
@@ -111,7 +111,7 @@ function generateBookshelf(title, techList, themeName, theme) {
     `;
   }).join('');
 
-  return `<svg width="800" height="150" xmlns="http://www.w3.org/2000/svg">
+  return `<svg viewBox="0 0 800 150" width="100%" xmlns="http://www.w3.org/2000/svg">
     <text x="50" y="20" font-family="EB Garamond, serif" font-size="16" fill="${theme.primary}" font-weight="bold">${title}</text>
     <!-- Shelf -->
     <rect x="30" y="110" width="700" height="10" fill="${theme.accent1}" opacity="0.5" rx="2"/>
