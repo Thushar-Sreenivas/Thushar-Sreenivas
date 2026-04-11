@@ -15,16 +15,16 @@ progress:
 # Project State
 
 ## 🎯 Current Focus
-**Phase**: 2 - Visual Design System
-**Plan**: Not started
-**Status**: Ready to plan
-**Goal**: The profile features a cohesive, anime-inspired aesthetic using consistent colors, typography, and original SVG elements
+**Phase**: 3 - Layout Architecture
+**Plan**: 2
+**Status**: Ready to execute
+**Goal**: Automate build pipeline
 
 ## 📍 Position
 
 | Phase | Plan | Status |
 |-------|------|--------|
-| 2 | Not started | Ready to plan |
+| 3 | 2 | Ready to execute |
 
 *Progress: 1/3 Phases completed*
 
@@ -43,6 +43,8 @@ See: .planning/PROJECT.md (updated 2026-04-11)
 - Drafted Phase 1 Narrative Design Spec and Implementation Plan based on the `Thushar_Sreenivas_Cover_Letter.pdf`.
 - Chose native Node.js asserts over test frameworks like Jest for content verification to keep dependencies zero.
 - Used standard Markdown headings and blockquotes instead of HTML tags for maximum mobile compatibility.
+- [Phase 03] Used robust Regex matching in build-template.js to handle flexible HTML source blocks instead of a full DOM parser.
+- [Phase 03] Replaced SVG width/height with viewBox to allow intrinsic fluid scaling for mobile devices.
 
 ### Active Blockers
 - None
