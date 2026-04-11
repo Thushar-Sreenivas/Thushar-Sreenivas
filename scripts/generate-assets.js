@@ -67,3 +67,35 @@ function generateFooter(themeName, theme) {
   writeSvg(`hero-banner-${mode}.svg`, generateHero(mode, THEMES[mode]));
   writeSvg(`footer-${mode}.svg`, generateFooter(mode, THEMES[mode]));
 });
+
+function generateDivider(themeName, theme) {
+  return `<svg width="800" height="40" xmlns="http://www.w3.org/2000/svg">
+    <line x1="100" y1="20" x2="350" y2="20" stroke="${theme.accent1}" stroke-width="1" opacity="0.4"/>
+    <polygon points="400,15 405,25 395,25" fill="${theme.primary}" opacity="0.8"/>
+    <circle cx="380" cy="22" r="2" fill="${theme.accent2}"/>
+    <circle cx="420" cy="22" r="2" fill="${theme.accent2}"/>
+    <line x1="450" y1="20" x2="700" y2="20" stroke="${theme.accent1}" stroke-width="1" opacity="0.4"/>
+  </svg>`;
+}
+
+function generateHeader(title, width, themeName, theme) {
+  return `<svg width="${width}" height="60" xmlns="http://www.w3.org/2000/svg">
+    <text x="20" y="40" font-family="EB Garamond, serif" font-size="28" font-weight="bold" fill="${theme.text}">
+      ${title}
+    </text>
+    <circle cx="10" cy="32" r="4" fill="${theme.primary}"/>
+  </svg>`;
+}
+
+const headers = [
+  { file: 'header-journey', title: 'The Journey So Far', width: 400 },
+  { file: 'header-grimoire', title: 'The Grimoire', width: 300 },
+  { file: 'header-contact', title: 'Send a Raven', width: 300 }
+];
+
+['light', 'dark'].forEach(mode => {
+  writeSvg(`divider-${mode}.svg`, generateDivider(mode, THEMES[mode]));
+  headers.forEach(h => {
+    writeSvg(`${h.file}-${mode}.svg`, generateHeader(h.title, h.width, mode, THEMES[mode]));
+  });
+});
