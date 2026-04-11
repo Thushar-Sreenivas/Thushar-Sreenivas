@@ -10,7 +10,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Narrative & Content | 0/0 | Not started | - |
+| 1. Narrative & Content | 0/1 | Not started | - |
 | 2. Visual Design System | 0/0 | Not started | - |
 | 3. Layout & Architecture | 0/0 | Not started | - |
 
@@ -24,7 +24,8 @@
 1. User reads a cohesive narrative that introduces the "code as magic" concept
 2. User can identify key technical experiences (Pencil, Surge, Crypto) and passion for AI/tooling
 3. User can easily find and click contact/social links embedded in the story
-**Plans**: TBD
+**Plans**: 1 plan
+- [ ] 01-01-PLAN.md — Write the human, jargon-free narrative of Thushar's technical journey.
 
 ### Phase 2: Visual Design System
 **Goal**: The profile has a complete "Frieren" visual identity replacing generic GitHub components
