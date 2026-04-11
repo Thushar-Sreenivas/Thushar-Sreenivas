@@ -11,7 +11,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Narrative & Content | 0/1 | Not started | - |
-| 2. Visual Design System | 0/0 | Not started | - |
+| 2. Visual Design System | 1/1 | Complete | x |
 | 3. Layout & Architecture | 0/0 | Not started | - |
 
 ## Phase Details
