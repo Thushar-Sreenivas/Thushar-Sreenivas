@@ -1,13 +1,20 @@
 # Thushar Sreenivas
 ### Senior Frontend Engineer · React, TypeScript, R&D, AI Tooling
 
-![Magic Quote](assets/images/hero-banner-light.svg#gh-light-mode-only)
-![Magic Quote](assets/images/hero-banner-dark.svg#gh-dark-mode-only)
+<div align="center">
+  <img src="assets/hero-light.svg#gh-light-mode-only" width="800" alt="Magic Quote">
+  <img src="assets/hero-dark.svg#gh-dark-mode-only" width="800" alt="Magic Quote">
+</div>
 
-![Divider](assets/images/divider-light.svg#gh-light-mode-only)
-![Divider](assets/images/divider-dark.svg#gh-dark-mode-only)
-![The Journey So Far](assets/images/header-journey-light.svg#gh-light-mode-only)
-![The Journey So Far](assets/images/header-journey-dark.svg#gh-dark-mode-only)
+<div align="center">
+  <img src="assets/divider-light.svg#gh-light-mode-only" width="800" alt="Divider">
+  <img src="assets/divider-dark.svg#gh-dark-mode-only" width="800" alt="Divider">
+</div>
+
+<div align="center">
+  <img src="assets/header-experience-light.svg#gh-light-mode-only" width="800" alt="Journey & Experience">
+  <img src="assets/header-experience-dark.svg#gh-dark-mode-only" width="800" alt="Journey & Experience">
+</div>
 
 My adventure through the tech landscape has always been driven by a fascination with the spells we weave into reality. 
 
@@ -17,24 +24,35 @@ When I journeyed to **Surge** (Sequoia), the challenge evolved. I architected mo
 
 Later, I delved into the deep backend with **Crypto** vaults, writing robust and highly concurrent systems in **Go**. This taught me the importance of reliability and safety when dealing with complex, high-stakes infrastructure.
 
-![Divider](assets/images/divider-light.svg#gh-light-mode-only)
-![Divider](assets/images/divider-dark.svg#gh-dark-mode-only)
-![The Grimoire](assets/images/header-grimoire-light.svg#gh-light-mode-only)
-![The Grimoire](assets/images/header-grimoire-dark.svg#gh-dark-mode-only)
+<div align="center">
+  <img src="assets/divider-light.svg#gh-light-mode-only" width="800" alt="Divider">
+  <img src="assets/divider-dark.svg#gh-dark-mode-only" width="800" alt="Divider">
+</div>
 
-![Frontend Spells](assets/images/grimoire-frontend-light.svg#gh-light-mode-only)
-![Frontend Spells](assets/images/grimoire-frontend-dark.svg#gh-dark-mode-only)
-![Backend Runes](assets/images/grimoire-backend-light.svg#gh-light-mode-only)
-![Backend Runes](assets/images/grimoire-backend-dark.svg#gh-dark-mode-only)
-![Automation Artifacts](assets/images/grimoire-tooling-light.svg#gh-light-mode-only)
-![Automation Artifacts](assets/images/grimoire-tooling-dark.svg#gh-dark-mode-only)
+<div align="center">
+  <img src="assets/header-tech-light.svg#gh-light-mode-only" width="800" alt="The Grimoire (Tech Stack)">
+  <img src="assets/header-tech-dark.svg#gh-dark-mode-only" width="800" alt="The Grimoire (Tech Stack)">
+</div>
+
+<div align="center">
+  <img src="assets/stack-frontend-light.svg#gh-light-mode-only" width="800" alt="Frontend Spells">
+  <img src="assets/stack-frontend-dark.svg#gh-dark-mode-only" width="800" alt="Frontend Spells">
+  
+  <img src="assets/stack-backend-light.svg#gh-light-mode-only" width="800" alt="Backend Runes">
+  <img src="assets/stack-backend-dark.svg#gh-dark-mode-only" width="800" alt="Backend Runes">
+  
+  <img src="assets/stack-tooling-light.svg#gh-light-mode-only" width="800" alt="Automation Artifacts">
+  <img src="assets/stack-tooling-dark.svg#gh-dark-mode-only" width="800" alt="Automation Artifacts">
+</div>
 
 Beyond product development, my true passion lies in developer **tooling**, **automation**, and creating **AI** workflows. I love building the tools that help other developers write better code faster. Whether it's crafting sophisticated GitHub Actions to automate CI/CD pipelines or exploring new AI-assisted coding methodologies, I am always expanding my grimoire.
 
-![Divider](assets/images/divider-light.svg#gh-light-mode-only)
-![Divider](assets/images/divider-dark.svg#gh-dark-mode-only)
-![Send a Raven](assets/images/header-contact-light.svg#gh-light-mode-only)
-![Send a Raven](assets/images/header-contact-dark.svg#gh-dark-mode-only)
+<div align="center">
+  <img src="assets/divider-light.svg#gh-light-mode-only" width="800" alt="Divider">
+  <img src="assets/divider-dark.svg#gh-dark-mode-only" width="800" alt="Divider">
+</div>
+
+## 📫 Send a Raven
 
 If you'd like to collaborate, talk about front-end architecture, or share a bit of magic, you can reach me through these channels:
 
@@ -42,6 +60,7 @@ If you'd like to collaborate, talk about front-end architecture, or share a bit 
 - Check out my open-source spells on [GitHub](https://github.com/thusharsreenivas)
 - Or simply send a direct message via [Email](mailto:hello@example.com)
 
-
-![Footer](assets/images/footer-light.svg#gh-light-mode-only)
-![Footer](assets/images/footer-dark.svg#gh-dark-mode-only)
+<div align="center">
+  <img src="assets/footer-light.svg#gh-light-mode-only" width="800" alt="Footer">
+  <img src="assets/footer-dark.svg#gh-dark-mode-only" width="800" alt="Footer">
+</div>

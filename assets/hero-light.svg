@@ -1,0 +1,63 @@
+<svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <style>
+      @keyframes float1 {
+        0%, 100% { transform: translate(0px, 0px) rotate(0deg); opacity: 0.6; }
+        50% { transform: translate(10px, -15px) rotate(10deg); opacity: 0.9; }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translate(0px, 0px) rotate(0deg); opacity: 0.4; }
+        50% { transform: translate(-10px, -10px) rotate(-15deg); opacity: 0.7; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      .petal1 { animation: float1 8s ease-in-out infinite; }
+      .petal2 { animation: float2 10s ease-in-out infinite; }
+      .star { animation: pulse 4s ease-in-out infinite; }
+      .text-quote {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        fill: #334155;
+      }
+    </style>
+    
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  <rect viewBox="0 0 800 250" fill="url(#bg-grad)" />
+
+  <!-- Magical elements / Aurel flowers (soft-blue and gold) -->
+  <g class="petal1" transform-origin="150 100">
+    <path d="M 150 100 Q 160 80 170 100 Q 160 120 150 100" fill="#bae6fd"/>
+    <circle cx="150" cy="100" r="3" fill="#eab308"/>
+  </g>
+  <g class="petal2" transform-origin="650 180">
+    <path d="M 650 180 Q 665 150 680 180 Q 665 210 650 180" fill="#bae6fd"/>
+    <circle cx="650" cy="180" r="4" fill="#eab308"/>
+  </g>
+  <g class="petal1" transform-origin="200 200" style="animation-delay: -2s;">
+    <path d="M 200 200 Q 210 180 220 200 Q 210 220 200 200" fill="#bae6fd"/>
+    <circle cx="200" cy="200" r="2" fill="#eab308"/>
+  </g>
+  <g class="petal2" transform-origin="700 80" style="animation-delay: -4s;">
+    <path d="M 700 80 Q 710 60 720 80 Q 710 100 700 80" fill="#bae6fd"/>
+    <circle cx="700" cy="80" r="3" fill="#eab308"/>
+  </g>
+
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="1.5" fill="#eab308" class="star" style="animation-delay: -1s;" />
+  <circle cx="750" cy="120" r="2" fill="#eab308" class="star" style="animation-delay: -3s;" />
+  <circle cx="300" cy="40" r="1" fill="#bae6fd" class="star" style="animation-delay: -2s;" />
+
+  <!-- Text -->
+  <text x="400" y="130" text-anchor="middle" class="text-quote">
+    "There's something about making code work that still feels like magic to me."
+  </text>
+</svg>

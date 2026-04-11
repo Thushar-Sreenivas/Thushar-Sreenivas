@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <style>
+      .header-text {
+        font-family: Georgia, serif;
+        font-size: 32px;
+        fill: #334155;
+        font-weight: bold;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(400, 45)">
+    <!-- Accents -->
+    <path d="M -260 5 L -200 5" stroke="#eab308" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="-190" cy="5" r="2" fill="#bae6fd"/>
+    
+    <!-- Text -->
+    <text x="0" y="10" text-anchor="middle" class="header-text">The Grimoire (Tech Stack)</text>
+    
+    <!-- Accents -->
+    <circle cx="190" cy="5" r="2" fill="#bae6fd"/>
+    <path d="M 200 5 L 260 5" stroke="#eab308" stroke-width="1.5" opacity="0.4"/>
+  </g>
+</svg>
