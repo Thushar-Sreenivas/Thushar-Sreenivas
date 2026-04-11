@@ -1,0 +1,13 @@
+{
+  "name": "github_readme",
+  "version": "1.0.0",
+  "description": "> *\"There's something about making code work that still feels like magic to me.\"*",
+  "main": "test-satori.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
