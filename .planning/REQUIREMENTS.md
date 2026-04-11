@@ -9,9 +9,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Narrative & Copy
 
-- [ ] **NARR-01**: Write a Hero/Intro section in a human, jargon-free tone focusing on "code as magic"
-- [ ] **NARR-02**: Weave key experiences (Pencil Canvas Editor, Figma/Photoshop plugins, Surge React Native, Crypto Go backend) into a cohesive journey story
-- [ ] **NARR-03**: Integrate contact and social links naturally into the narrative structure
+- [x] **NARR-01**: Write a Hero/Intro section in a human, jargon-free tone focusing on "code as magic"
+- [x] **NARR-02**: Weave key experiences (Pencil Canvas Editor, Figma/Photoshop plugins, Surge React Native, Crypto Go backend) into a cohesive journey story
+- [x] **NARR-03**: Integrate contact and social links naturally into the narrative structure
 
 ### Visuals & Theming
 
@@ -20,7 +20,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Technical Showcase
 
-- [ ] **TECH-01**: Feature passion for developer tooling, automation (GitHub Actions), and AI workflows as core highlights of the magic journey
+- [x] **TECH-01**: Feature passion for developer tooling, automation (GitHub Actions), and AI workflows as core highlights of the magic journey
 
 ### Structure & Layout
 
@@ -58,12 +58,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| NARR-01 | Phase 1 | Pending |
-| NARR-02 | Phase 1 | Pending |
-| NARR-03 | Phase 1 | Pending |
+| NARR-01 | Phase 1 | Complete |
+| NARR-02 | Phase 1 | Complete |
+| NARR-03 | Phase 1 | Complete |
 | VISL-01 | Phase 2 | Pending |
 | VISL-02 | Phase 2 | Pending |
-| TECH-01 | Phase 1 | Pending |
+| TECH-01 | Phase 1 | Complete |
 | LAYT-01 | Phase 3 | Pending |
 | LAYT-02 | Phase 3 | Pending |
 | LAYT-03 | Phase 3 | Pending |
