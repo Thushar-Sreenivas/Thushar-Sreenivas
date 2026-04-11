@@ -58,20 +58,20 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| NARR-01 | Phase [N] | Pending |
-| NARR-02 | Phase [N] | Pending |
-| NARR-03 | Phase [N] | Pending |
-| VISL-01 | Phase [N] | Pending |
-| VISL-02 | Phase [N] | Pending |
-| TECH-01 | Phase [N] | Pending |
-| LAYT-01 | Phase [N] | Pending |
-| LAYT-02 | Phase [N] | Pending |
-| LAYT-03 | Phase [N] | Pending |
+| NARR-01 | Phase 1 | Pending |
+| NARR-02 | Phase 1 | Pending |
+| NARR-03 | Phase 1 | Pending |
+| VISL-01 | Phase 2 | Pending |
+| VISL-02 | Phase 2 | Pending |
+| TECH-01 | Phase 1 | Pending |
+| LAYT-01 | Phase 3 | Pending |
+| LAYT-02 | Phase 3 | Pending |
+| LAYT-03 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 9 total
-- Mapped to phases: 0
-- Unmapped: 9 ⚠️
+- Mapped to phases: 9
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-11*
