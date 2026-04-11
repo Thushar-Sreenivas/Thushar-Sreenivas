@@ -1,0 +1,18 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="grad-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#581c87" stop-opacity="0.3" />
+        <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+      </linearGradient>
+    </defs>
+    <rect width="800" height="200" fill="url(#grad-dark)" />
+    <!-- Flower/magic petal motifs -->
+    <circle cx="100" cy="150" r="10" fill="#94a3b8" opacity="0.6"/>
+    <circle cx="150" cy="120" r="6" fill="#14b8a6" opacity="0.8"/>
+    <circle cx="700" cy="80" r="8" fill="#94a3b8" opacity="0.5"/>
+    <circle cx="750" cy="140" r="12" fill="#14b8a6" opacity="0.7"/>
+    
+    <text x="400" y="100" font-family="EB Garamond, serif" font-size="24" font-style="italic" fill="#e2e8f0" text-anchor="middle">
+      "There's something about making code work that still feels like magic to me."
+    </text>
+  </svg>

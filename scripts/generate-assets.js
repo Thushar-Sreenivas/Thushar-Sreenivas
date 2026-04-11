@@ -31,4 +31,39 @@ function writeSvg(filename, content) {
 }
 
 // Testing the write utility
-writeSvg('test.svg', `<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="${THEMES.light.primary}"/></svg>`);
+// writeSvg('test.svg', `<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="${THEMES.light.primary}"/></svg>`);
+
+function generateHero(themeName, theme) {
+  return `<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="grad-${themeName}" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="${theme.accent2}" stop-opacity="0.3" />
+        <stop offset="100%" stop-color="${theme.bg}" stop-opacity="0" />
+      </linearGradient>
+    </defs>
+    <rect width="800" height="200" fill="url(#grad-${themeName})" />
+    <!-- Flower/magic petal motifs -->
+    <circle cx="100" cy="150" r="10" fill="${theme.accent1}" opacity="0.6"/>
+    <circle cx="150" cy="120" r="6" fill="${theme.primary}" opacity="0.8"/>
+    <circle cx="700" cy="80" r="8" fill="${theme.accent1}" opacity="0.5"/>
+    <circle cx="750" cy="140" r="12" fill="${theme.primary}" opacity="0.7"/>
+    
+    <text x="400" y="100" font-family="EB Garamond, serif" font-size="24" font-style="italic" fill="${theme.text}" text-anchor="middle">
+      "There's something about making code work that still feels like magic to me."
+    </text>
+  </svg>`;
+}
+
+function generateFooter(themeName, theme) {
+  return `<svg width="800" height="60" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 200,30 Q 400,60 600,30" fill="none" stroke="${theme.accent1}" stroke-width="2" stroke-dasharray="4 8" opacity="0.5"/>
+    <circle cx="400" cy="45" r="4" fill="${theme.primary}"/>
+    <circle cx="380" cy="35" r="2" fill="${theme.accent2}"/>
+    <circle cx="420" cy="35" r="2" fill="${theme.accent2}"/>
+  </svg>`;
+}
+
+['light', 'dark'].forEach(mode => {
+  writeSvg(`hero-banner-${mode}.svg`, generateHero(mode, THEMES[mode]));
+  writeSvg(`footer-${mode}.svg`, generateFooter(mode, THEMES[mode]));
+});
