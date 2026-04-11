@@ -99,3 +99,34 @@ const headers = [
     writeSvg(`${h.file}-${mode}.svg`, generateHeader(h.title, h.width, mode, THEMES[mode]));
   });
 });
+
+function generateBookshelf(title, techList, themeName, theme) {
+  const books = techList.map((tech, i) => {
+    const x = 50 + (i * 90);
+    return `
+      <g transform="translate(${x}, 30)">
+        <rect width="60" height="80" rx="4" fill="${theme.accent2}" opacity="0.2" stroke="${theme.accent1}" stroke-width="2"/>
+        <text x="30" y="45" font-family="sans-serif" font-size="12" fill="${theme.text}" text-anchor="middle">${tech}</text>
+      </g>
+    `;
+  }).join('');
+
+  return `<svg width="800" height="150" xmlns="http://www.w3.org/2000/svg">
+    <text x="50" y="20" font-family="EB Garamond, serif" font-size="16" fill="${theme.primary}" font-weight="bold">${title}</text>
+    <!-- Shelf -->
+    <rect x="30" y="110" width="700" height="10" fill="${theme.accent1}" opacity="0.5" rx="2"/>
+    ${books}
+  </svg>`;
+}
+
+const grimoires = [
+  { file: 'grimoire-frontend', title: 'Frontend Spells', techs: ['React', 'TypeScript', 'React Native'] },
+  { file: 'grimoire-backend', title: 'Backend Runes', techs: ['Go', 'Node.js'] },
+  { file: 'grimoire-tooling', title: 'Automation Artifacts', techs: ['GitHub Actions', 'Figma API'] }
+];
+
+['light', 'dark'].forEach(mode => {
+  grimoires.forEach(g => {
+    writeSvg(`${g.file}-${mode}.svg`, generateBookshelf(g.title, g.techs, mode, THEMES[mode]));
+  });
+});

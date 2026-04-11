@@ -1,0 +1,21 @@
+<svg width="800" height="150" xmlns="http://www.w3.org/2000/svg">
+    <text x="50" y="20" font-family="EB Garamond, serif" font-size="16" fill="#0ea5e9" font-weight="bold">Frontend Spells</text>
+    <!-- Shelf -->
+    <rect x="30" y="110" width="700" height="10" fill="#eab308" opacity="0.5" rx="2"/>
+    
+      <g transform="translate(50, 30)">
+        <rect width="60" height="80" rx="4" fill="#bae6fd" opacity="0.2" stroke="#eab308" stroke-width="2"/>
+        <text x="30" y="45" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">React</text>
+      </g>
+    
+      <g transform="translate(140, 30)">
+        <rect width="60" height="80" rx="4" fill="#bae6fd" opacity="0.2" stroke="#eab308" stroke-width="2"/>
+        <text x="30" y="45" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">TypeScript</text>
+      </g>
+    
+      <g transform="translate(230, 30)">
+        <rect width="60" height="80" rx="4" fill="#bae6fd" opacity="0.2" stroke="#eab308" stroke-width="2"/>
+        <text x="30" y="45" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">React Native</text>
+      </g>
+    
+  </svg>

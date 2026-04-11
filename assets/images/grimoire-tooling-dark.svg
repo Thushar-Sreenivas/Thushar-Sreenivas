@@ -1,0 +1,16 @@
+<svg width="800" height="150" xmlns="http://www.w3.org/2000/svg">
+    <text x="50" y="20" font-family="EB Garamond, serif" font-size="16" fill="#14b8a6" font-weight="bold">Automation Artifacts</text>
+    <!-- Shelf -->
+    <rect x="30" y="110" width="700" height="10" fill="#94a3b8" opacity="0.5" rx="2"/>
+    
+      <g transform="translate(50, 30)">
+        <rect width="60" height="80" rx="4" fill="#581c87" opacity="0.2" stroke="#94a3b8" stroke-width="2"/>
+        <text x="30" y="45" font-family="sans-serif" font-size="12" fill="#e2e8f0" text-anchor="middle">GitHub Actions</text>
+      </g>
+    
+      <g transform="translate(140, 30)">
+        <rect width="60" height="80" rx="4" fill="#581c87" opacity="0.2" stroke="#94a3b8" stroke-width="2"/>
+        <text x="30" y="45" font-family="sans-serif" font-size="12" fill="#e2e8f0" text-anchor="middle">Figma API</text>
+      </g>
+    
+  </svg>
