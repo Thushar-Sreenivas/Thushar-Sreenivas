@@ -44,4 +44,6 @@
 1. Repository owner can compile the final `README.md` from `README.template.md` using a single build script
 2. User can view the README on mobile without horizontal scrollbars or broken layouts
 3. User can toggle GitHub between light and dark modes and see correct asset colors
-**Plans**: TBD
+**Plans**: 2 plans
+- [ ] 03-01-PLAN.md — Build Pipeline & Responsive Assets
+- [ ] 03-02-PLAN.md — CI Automation & Final Verification
