@@ -16,11 +16,9 @@
 
 I've been coding for 6+ years, and honestly, it's the thing I've consistently been best at. There's something about making code work that still feels like magic to me. I like problems that don't fit neatly into one category.
 
-Right now I'm on the frontend squad at Pencil. We build the core canvas editor in React and TypeScript... I also shipped TypeScript plugins for Figma and Photoshop.
+Right now I'm on the frontend team at [Pencil](https://trypencil.com/). We build the core canvas editor in React and TypeScript... I also shipped TypeScript plugins for Figma and Photoshop.
 
-Before Pencil, I shipped a React Native app for Sequoia Capital's Surge accelerator, handling the complex media playback layer.
-
-I've also spent time in the backend building robust, highly concurrent systems in Go for Crypto vaults, learning the importance of reliability in high-stakes infrastructure.
+Before Pencil, I shipped a React Native app for Sequoia Capital. I've also spent time in the backend building concurrent systems in Go for Crypto vaults.
 
 <div align="center">
   <img src="assets/images/divider-dark-only.svg" width="800" alt="Divider">
