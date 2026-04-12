@@ -45,8 +45,8 @@
 1. Profile README successfully displays the new dark-theme SVGs natively using `#gh-dark-mode-only` anchors.
 2. Frieren-themed typography and aesthetic elements render perfectly without external font loading issues.
 **Plans**: 2 plans
-- [ ] 07-01-PLAN.md — Foundation and Typography SVGs
-- [ ] 07-02-PLAN.md — Complex Magic Circles
+- [ ] 07-01-PLAN.md — Establish programmatic SVG generation foundation using `d3-shape` and `text-to-svg`.
+- [ ] 07-02-PLAN.md — Implement visually stunning, highly intricate Frieren-themed magic circles using `d3-shape` in Node.js.
 
 ### Phase 8: Algorithmic Background
 **Goal**: Users experience a dynamic algorithmic Frieren background when viewing the profile in dark mode
