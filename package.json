@@ -5,7 +5,7 @@
   "main": "test-satori.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node scripts/generate-assets.js && node scripts/build-template.js && node scripts/verify-content.js"
+    "build": "node scripts/generate-assets.js && node scripts/verify-svgs.js && node scripts/build-template.js && node scripts/verify-content.js"
   },
   "keywords": [],
   "author": "",
