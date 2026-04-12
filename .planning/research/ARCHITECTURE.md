@@ -1,88 +1,179 @@
-# Architecture Patterns
+# Architecture Research
 
-**Domain:** GitHub Profile Readme System
-**Researched:** 2026-04-11
+**Domain:** GitHub Profile Visual Architecture
+**Researched:** 2026-04-12
+**Confidence:** HIGH
 
-## Recommended Architecture
+## Standard Architecture
 
-For a highly themed, narrative-driven profile with minimal external infrastructure, the **Static Builder with Automated Workflow (Cron Pattern)** is the industry standard. It fulfills the constraint of avoiding complex external backends while supporting rich dynamic elements.
+### System Overview
 
-### Component Boundaries
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                       Data Pipeline                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────────┐    ┌─────────────────┐                 │
+│  │ Algorithmic Art │    │ generate-assets │                 │
+│  │ Skill / Prompt  │    │ (Node.js script)│                 │
+│  └───────┬─────────┘    └────────┬────────┘                 │
+│          │                       │                          │
+├──────────┼───────────────────────┼──────────────────────────┤
+│          │          Asset Layer  │                          │
+├──────────┼───────────────────────┼──────────────────────────┤
+│  ┌───────▼─────────┐    ┌────────▼────────┐                 │
+│  │ assets/images/  │    │ assets/images/  │                 │
+│  │ hero-bg-dark.gif│    │ complex-*.svg   │                 │
+│  └───────┬─────────┘    └────────┬────────┘                 │
+│          │                       │                          │
+├──────────┼───────────────────────┼──────────────────────────┤
+│          │        Verification   │                          │
+├──────────┼───────────────────────┼──────────────────────────┤
+│  ┌───────▼───────────────────────▼─────────────────┐        │
+│  │ verify-svgs.js                                  │        │
+│  │ (Updated with dark-only exemptions & GIF check) │        │
+│  └───────────────────────┬─────────────────────────┘        │
+│                          │                                  │
+├──────────────────────────┼──────────────────────────────────┤
+│                  Build & Render Layer                       │
+├──────────────────────────┼──────────────────────────────────┤
+│  ┌───────────────────────▼─────────────────────────┐        │
+│  │ README.template.md                              │        │
+│  │ (using <img src="..."#gh-dark-mode-only>)       │        │
+│  └───────────────────────┬─────────────────────────┘        │
+│                          │                                  │
+│  ┌───────────────────────▼─────────────────────────┐        │
+│  │ build-template.js (pass-through for <img>)      │        │
+│  └───────────────────────┬─────────────────────────┘        │
+│                          ▼                                  │
+│                      README.md                              │
+└─────────────────────────────────────────────────────────────┘
+```
 
-| Component | Responsibility | Communicates With |
-|-----------|---------------|-------------------|
-| **Template Source** (`README.template.md`) | Holds the base narrative, HTML structure, and placeholders (e.g., `{{ recent_posts }}`). | Build Script |
-| **Asset Directory** (`/assets`) | Stores static Frieren-themed SVGs, PNGs, and GIFs. Used for CSS animations. | `README.md` |
-| **Build Script** (`build.js` / `build.py`) | Fetches external data, processes placeholders, and generates the final markdown/SVGs. | External APIs, Template, `README.md` |
-| **GitHub Actions** (`.github/workflows/update.yml`) | Orchestrates the build process on a schedule or push, committing changes back to the repo. | Build Script, GitHub Repo |
-| **Final Output** (`README.md`) | The compiled file rendered by GitHub's markdown parser. | GitHub UI |
+### Component Responsibilities
 
-### Data Flow
+| Component | Responsibility | Typical Implementation |
+|-----------|----------------|------------------------|
+| `generate-assets.js` | Generates programmatic complex SVGs exclusively for the dark theme. | Node.js script using string interpolation for SVG nodes. |
+| `verify-svgs.js` | Validates asset existence, enforces Frieren theme colors, and allows deliberate exemptions for dark-only assets. | Node.js script using native `assert`. |
+| Algorithmic Art Pipeline | Generates the core background GIF using the `algorithmic-art` skill and a structured prompt via Claude Code. | Claude Code + p5.js HTML Viewer + Manual/Automated GIF Capture. |
+| `build-template.js` | Parses the template into the final README. Must support bypassing `<picture>` parsing for dark-only `<img>` tags. | Node.js regex replacement script. |
 
-1. **Trigger**: GitHub Action is triggered via `schedule` (e.g., daily) or `push` to main.
-2. **Fetch**: Build script runs locally on the runner, querying any needed APIs (e.g., GitHub GraphQL for repo stats, blog RSS feeds).
-3. **Generate**: 
-   - Script injects fetched data into `README.template.md` to produce `README.md`.
-   - *Optional:* Script modifies local `.svg` files to inject dynamic text (e.g., updating a stat within a Frieren magic circle SVG).
-4. **Commit**: Action detects changes and commits them back to the repository using a bot account.
-5. **Render**: GitHub's profile page automatically reflects the updated `README.md`.
+## Recommended Project Structure
 
-## Patterns to Follow
+```text
+/
+├── assets/
+│   └── images/
+│       ├── hero-bg-dark.gif       # Output of algorithmic-art generation
+│       └── complex-banner-dark.svg# Output of generate-assets.js
+├── scripts/
+│   ├── generate-assets.js         # Modified to handle complex dark-theme SVGs
+│   ├── verify-svgs.js             # Modified to exempt specific dark-only assets
+│   └── build-template.js          # Unmodified (passes through <img> tags)
+├── README.template.md             # Updated to use direct dark-only <img> tags
+└── README.md                      # Final output
+```
 
-### Pattern 1: Template-Driven Markdown Generation
-**What:** Keeping a `README.template.md` file and generating the final `README.md` rather than doing regex replaces on the live README.
-**When:** You have dynamic data (like latest repos or posts) that needs updating without breaking complex HTML layouts.
+### Structure Rationale
+
+- **`assets/images/`:** Keeps the GIF and SVGs together. GIF is committed manually once generated; SVGs are regenerated via script.
+- **`verify-svgs.js` Exemption:** The existing script strictly validates light/dark pairs. Introducing dark-theme-exclusive assets requires modifying this script to prevent build failures.
+
+## Architectural Patterns
+
+### Pattern 1: Target-Specific Verification Exemptions
+
+**What:** Adding explicit exceptions in `verify-svgs.js` for new complex SVGs that only have dark-theme variants, allowing them to pass CI checks without requiring an empty or dummy light-theme file.
+**When to use:** During transitional milestones or feature branches where one theme is the explicit focus.
+**Trade-offs:** Increases verification logic complexity, but avoids cluttering the repository with dummy files.
+
 **Example:**
 ```javascript
-// build.js
-const template = fs.readFileSync('README.template.md', 'utf-8');
-const data = await fetchLatestStats();
-const output = template.replace('{{STATS}}', data);
-fs.writeFileSync('README.md', output);
+const DARK_ONLY_ASSETS = ['complex-banner', 'grimoire-frontend'];
+
+darkFiles.forEach(df => {
+  const base = df.replace('-dark.svg', '');
+  if (!DARK_ONLY_ASSETS.includes(base)) {
+    assert(lightFiles.includes(`${base}-light.svg`), `Missing light variant for ${df}`);
+  }
+});
 ```
 
-### Pattern 2: Self-Contained SVG Assets
-**What:** Storing complex visual elements as `.svg` files in the repository and embedding them using `<img src="./assets/magic-circle.svg">` or `<picture>`.
-**When:** Building heavy themes (like Frieren) requiring animations or intricate designs that raw Markdown cannot support.
-**Example:**
-```html
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/frieren-dark.svg">
-  <img src="./assets/frieren-light.svg" width="100%">
-</picture>
+### Pattern 2: Hash-Based Markdown Image Targeting
+
+**What:** Using direct `<img src="path.gif#gh-dark-mode-only">` tags in `README.template.md` instead of the more verbose `<picture>` syntax.
+**When to use:** When you have an asset that is explicitly meant to be shown *only* in one specific theme, and there is no fallback required for the other theme.
+**Trade-offs:** `build-template.js` currently targets `<picture>` tags to generate dual-hashes. Direct `<img>` tags will simply be passed through by the build script, cleanly bypassing the `<picture>` parsing logic without requiring modifications to `build-template.js`.
+
+### Pattern 3: Hybrid Manual/Scripted Asset Generation
+
+**What:** Mixing fully automated SVG generation (`generate-assets.js`) with one-off manual algorithmic artifact generation (Claude Code `algorithmic-art` output captured to `.gif`).
+**When to use:** For complex browser-dependent visual outputs (like canvas/p5.js generated GIFs) where setting up headless Chromium in CI just to generate a static profile background is overkill.
+
+## Data Flow
+
+### Asset Generation and Build Flow
+
+```text
+[Developer Action]
+    ↓ (Runs Claude Code with algorithmic-art prompt)
+[p5.js HTML Artifact] → [Manual GIF Capture] → [Save to assets/images/hero-bg-dark.gif]
+    
+[Developer Action]
+    ↓ (Runs npm run build)
+[generate-assets.js] → [Outputs complex-*-dark.svg to assets/images/]
+    ↓
+[verify-svgs.js] ← [Reads assets/images/, checks for GIF, applies dark-only exemptions]
+    ↓
+[build-template.js] ← [Reads README.template.md]
+    ↓
+[README.md]
 ```
 
-### Pattern 3: Componentized HTML in Markdown
-**What:** Using HTML tables `<table>` with `align="center"` or `div` wrappers within the Markdown.
-**When:** Creating grid layouts (e.g., a 2-column layout for text vs image) which standard Markdown doesn't natively support.
+## Scaling Considerations
 
-## Anti-Patterns to Avoid
+| Scale | Architecture Adjustments |
+|-------|--------------------------|
+| 1-3 complex SVGs | Current `generate-assets.js` string interpolation is fine. |
+| 10+ complex SVGs | Consider moving SVG generation logic into dedicated factory functions or migrating from pure string manipulation to an SVG builder library (like `satori` or `svg-builder`) to manage node complexity. |
+| GIF File Size | An algorithmic GIF can become massive. The capture process must prioritize low frame rates (10-15fps) and aggressive color reduction to keep the final payload under 3MB to prevent GitHub caching timeouts. |
 
-### Anti-Pattern 1: Heavy External APIs for Images
-**What:** Relying completely on external public APIs (like generic `github-readme-stats` cards) for primary visuals.
-**Why bad:** Rate limits, downtime, and generic aesthetics destroy the unique narrative theme.
-**Instead:** Generate your own static SVGs or use a script to inject data into custom-designed SVGs natively within your action.
+## Anti-Patterns
 
-### Anti-Pattern 2: `<foreignObject>` in SVG
-**What:** Using `<foreignObject>` inside an SVG to render HTML/CSS elements.
-**Why bad:** GitHub renders README images inside `<img>` tags. Browsers universally block external resources and HTML rendering within `<img>` SVGs for security reasons. The SVG will silently fail and render as a blank box.
-**Instead:** Use pure vector nodes (`<path>`, `<rect>`, `<text>`) and inline styles within the SVG.
+### Anti-Pattern 1: Generating Dummy Light-Mode Assets
 
-### Anti-Pattern 3: Unbounded Commit Bloat
-**What:** Running a GitHub action every 15 minutes that makes a new commit.
-**Why bad:** The profile repository's commit history becomes unusable and bloated with thousands of automated commits.
-**Instead:** Limit cron jobs to once daily, or commit dynamic assets to a separate orphan `output` branch.
+**What people do:** Creating empty, transparent, or cloned `*-light.svg` files just to satisfy the `verify-svgs.js` pairing checks.
+**Why it's wrong:** Clutters the `assets` directory, increases the payload size unnecessarily, and obscures the explicit intent that this milestone is for dark-theme exclusive assets.
+**Do this instead:** Modify `verify-svgs.js` to whitelist dark-only assets using a specific naming convention or array map.
 
-## Scalability Considerations
+### Anti-Pattern 2: Attempting Headless GIF Generation in the Build Script
 
-| Concern | Static Builder (Cron) | Dynamic Serverless (API) |
-|---------|--------------|--------------|
-| **Latency/Load time** | Instant (cached directly by GitHub Camo via native repo assets) | Slower (Camo must fetch and proxy from external provider like Vercel) |
-| **Commit History** | Gets bloated if updated too frequently | Clean, no automated commits to the repo |
-| **Infrastructure Overhead** | Zero (fully native to GitHub Actions) | Moderate (Requires external hosting account and DNS/Domain management) |
+**What people do:** Integrating Puppeteer or Playwright into `generate-assets.js` to load the p5.js art and record frames into a GIF during `npm run build`.
+**Why it's wrong:** Drastically increases dependencies (downloading Chromium), bloats the repository, makes local generation extremely slow, and violates the constraint of keeping infrastructure minimal and self-contained within standard Node.js limits.
+**Do this instead:** Treat the GIF as a one-off static asset generated locally by the developer via the skill prompt, and commit the resulting `.gif` binary.
+
+## Integration Points
+
+### Internal Boundaries
+
+| Boundary | Communication | Notes |
+|----------|---------------|-------|
+| `generate-assets.js` ↔ `verify-svgs.js` | File System | `verify-svgs.js` must be updated *before* generating the new complex dark assets, otherwise the build will instantly fail. |
+| Template ↔ `build-template.js` | Regex Parsing | Direct `<img src="#gh-dark-mode-only">` tags will be ignored by `build-template.js` (which searches for `<picture>`), which is the exact behavior we want. |
+
+## Suggested Build Order
+
+1. **Verification Updates:** Update `verify-svgs.js` to allow specific assets to skip the light-mode pairing check, and add an assertion to verify `hero-bg-dark.gif` exists.
+2. **SVG Generation:** Update `generate-assets.js` to output the new complex dark-theme SVGs.
+3. **Template Updates:** Add the standalone `#gh-dark-mode-only` image tags to `README.template.md` pointing to the new SVGs and GIF.
+4. **GIF Generation:** Use Claude Code with the `algorithmic-art` skill to generate the p5.js viewer, record the GIF, and place it in the `assets/images/` directory.
 
 ## Sources
 
-- **HIGH CONFIDENCE**: GitHub Markdown rendering constraints & HTML support limits (Official documentation & internal knowledge base).
-- **HIGH CONFIDENCE**: Browser security restrictions on `<img>` SVGs (`<foreignObject>` limits) (W3C / MDN specs).
-- **HIGH CONFIDENCE**: Community standard architectures for profile READMEs (Internal knowledge base derived from thousands of open-source profile repos).
+- **HIGH CONFIDENCE**: Official GitHub documentation on markdown mode-specific rendering hashes (`#gh-dark-mode-only`).
+- **HIGH CONFIDENCE**: Existing `scripts/verify-svgs.js` code structure requiring updates for unilateral theme generation.
+- **HIGH CONFIDENCE**: Existing `scripts/build-template.js` regex structure relying on `<picture>` wrappers.
+
+---
+*Architecture research for: GitHub Profile Readme — Algorithmic Art GIF and Complex SVGs*
+*Researched: April 12, 2026*
