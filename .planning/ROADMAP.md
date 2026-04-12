@@ -44,7 +44,9 @@
 **Success Criteria**:
 1. Profile README successfully displays the new dark-theme SVGs natively using `#gh-dark-mode-only` anchors.
 2. Frieren-themed typography and aesthetic elements render perfectly without external font loading issues.
-**Plans**: TBD
+**Plans**: 2 plans
+- [ ] 07-01-PLAN.md — Foundation and Typography SVGs
+- [ ] 07-02-PLAN.md — Complex Magic Circles
 
 ### Phase 8: Algorithmic Background
 **Goal**: Users experience a dynamic algorithmic Frieren background when viewing the profile in dark mode
@@ -67,5 +69,5 @@
 | 5. Fix Template Architecture & Asset Integration | v1.0 | 1/1 | Complete | 2026-04-12 |
 | 05.1. Refactor README content to exactly match Cover Letter tone | v1.0 | 1/1 | Complete | 2026-04-12 |
 | 6. Pipeline Foundation | v1.1 | 0/1 | Not started | - |
-| 7. Thematic Dark SVGs | v1.1 | 0/0 | Not started | - |
+| 7. Thematic Dark SVGs | v1.1 | 0/2 | Not started | - |
 | 8. Algorithmic Background | v1.1 | 0/1 | Not started | - |
