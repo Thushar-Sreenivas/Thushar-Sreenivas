@@ -71,3 +71,12 @@
 | 6. Pipeline Foundation | v1.1 | 0/1 | Not started | - |
 | 7. Thematic Dark SVGs | v1.1 | 0/2 | Not started | - |
 | 8. Algorithmic Background | v1.1 | 0/1 | Not started | - |
+### Phase 08.1: Update skills in SVGs based on resume without grimoire suffix (INSERTED)
+
+**Goal:** [Urgent work - to be planned]
+**Requirements**: TBD
+**Depends on:** Phase 8
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 08.1 to break down)

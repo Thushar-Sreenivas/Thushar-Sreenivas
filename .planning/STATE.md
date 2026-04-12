@@ -37,6 +37,7 @@ See: .planning/PROJECT.md (updated 2026-04-12)
 ## 🧠 Accumulated Context
 
 ### Roadmap Evolution
+- Phase 08.1 inserted after Phase 8: Update skills in SVGs based on resume without grimoire suffix (URGENT)
 - Completed v1.1 Visual Overhaul milestone
 - Phase 6, 7, 8 successfully updated pipelines, SVGs, and generated the Algorithmic Background GIF.
 
