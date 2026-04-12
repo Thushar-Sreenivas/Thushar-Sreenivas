@@ -17,8 +17,8 @@
 
 ### Architecture Updates
 
-- [ ] **ARCH-01**: Update `verify-svgs.js` to allow dark-theme-only visual assets.
-- [ ] **ARCH-02**: Ensure the build pipeline supports the new visual assets (SVG, GIF/MP4).
+- [x] **ARCH-01**: Update `verify-svgs.js` to allow dark-theme-only visual assets.
+- [x] **ARCH-02**: Ensure the build pipeline supports the new visual assets (SVG, GIF/MP4).
 
 ## v1.2 Requirements (Future)
 
@@ -47,8 +47,8 @@
 | ART-02 | Phase 8 | Pending |
 | SVG-01 | Phase 7 | Pending |
 | SVG-02 | Phase 7 | Pending |
-| ARCH-01 | Phase 6 | Pending |
-| ARCH-02 | Phase 6 | Pending |
+| ARCH-01 | Phase 6 | Complete |
+| ARCH-02 | Phase 6 | Complete |
 
 **Coverage:**
 - v1.1 requirements: 6 total
