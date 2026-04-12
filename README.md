@@ -2,6 +2,10 @@
 ### Senior Frontend Engineer · React, TypeScript, R&D, AI Tooling
 
 <div align="center">
+  <img src="assets/images/Zoltraak-dark-only.gif#gh-dark-mode-only" width="800" alt="Zoltraak Magic Circles Background">
+</div>
+
+<div align="center">
   <img src="assets/images/hero-banner-light.svg#gh-light-mode-only" alt="Magic Quote" width="800">
   <img src="assets/images/hero-banner-dark.svg#gh-dark-mode-only" alt="Magic Quote" width="800">
 </div>

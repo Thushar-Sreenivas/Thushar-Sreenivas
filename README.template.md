@@ -3,6 +3,12 @@
 
 <div align="center">
   <picture>
+    <img src="assets/images/Zoltraak-dark-only.gif#gh-dark-mode-only" width="800" alt="Zoltraak Magic Circles Background">
+  </picture>
+</div>
+
+<div align="center">
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/images/hero-banner-dark.svg">
     <img src="assets/images/hero-banner-light.svg" width="800" alt="Magic Quote">
   </picture>
