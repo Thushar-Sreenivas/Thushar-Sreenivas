@@ -3,6 +3,7 @@
 ## Milestones
 
 - ✅ **v1.0 Initial Frieren Theme & Narrative** — Phases 1-05.1 (shipped 2026-04-12)
+- 🚧 **v1.1 Visual Overhaul** — Phases 6-8
 
 ## Phases
 
@@ -18,9 +19,40 @@
 
 </details>
 
-### 🚧 v1.1 [Dynamic Features] (In Progress / Planned)
+### 🚧 v1.1 Visual Overhaul
 
-- [ ] Phase 6: [Name] ([N] plans)
+- [ ] **Phase 6: Pipeline Foundation** - Build system supports dark-theme-only visual media
+- [ ] **Phase 7: Thematic Dark SVGs** - High-quality Frieren SVGs integrated for dark mode
+- [ ] **Phase 8: Algorithmic Background** - Dynamic algorithmic art generated and embedded
+
+## Phase Details
+
+### Phase 6: Pipeline Foundation
+**Goal**: The build system successfully processes and validates dark-mode-only visual assets
+**Depends on**: Nothing
+**Requirements**: ARCH-01, ARCH-02
+**Success Criteria**:
+1. Validation script (`verify-svgs.js`) passes when visual assets only have dark-theme versions.
+2. Build pipeline correctly recognizes and processes new media formats (GIF/MP4) without failing.
+**Plans**: TBD
+
+### Phase 7: Thematic Dark SVGs
+**Goal**: Users see beautiful, high-quality Frieren-themed SVGs in the profile dark mode
+**Depends on**: Phase 6
+**Requirements**: SVG-01, SVG-02
+**Success Criteria**:
+1. Profile README successfully displays the new dark-theme SVGs natively using `#gh-dark-mode-only` anchors.
+2. Frieren-themed typography and aesthetic elements render perfectly without external font loading issues.
+**Plans**: TBD
+
+### Phase 8: Algorithmic Background
+**Goal**: Users experience a dynamic algorithmic Frieren background when viewing the profile in dark mode
+**Depends on**: Phase 6
+**Requirements**: ART-01, ART-02
+**Success Criteria**:
+1. A structured algorithmic-art prompt is prepared and ready for the user to execute via Claude Code.
+2. The generated algorithmic GIF/MP4 is embedded in the profile and plays automatically under GitHub's cache limits.
+**Plans**: TBD
 
 ## Progress
 
@@ -32,3 +64,6 @@
 | 4. Fix Visual Design System & Pipeline | v1.0 | 1/1 | Complete | 2026-04-12 |
 | 5. Fix Template Architecture & Asset Integration | v1.0 | 1/1 | Complete | 2026-04-12 |
 | 05.1. Refactor README content to exactly match Cover Letter tone | v1.0 | 1/1 | Complete | 2026-04-12 |
+| 6. Pipeline Foundation | v1.1 | 0/0 | Not started | - |
+| 7. Thematic Dark SVGs | v1.1 | 0/0 | Not started | - |
+| 8. Algorithmic Background | v1.1 | 0/0 | Not started | - |

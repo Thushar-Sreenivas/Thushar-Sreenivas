@@ -43,17 +43,17 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ART-01 | Phase [N] | Pending |
-| ART-02 | Phase [N] | Pending |
-| SVG-01 | Phase [N] | Pending |
-| SVG-02 | Phase [N] | Pending |
-| ARCH-01 | Phase [N] | Pending |
-| ARCH-02 | Phase [N] | Pending |
+| ART-01 | Phase 8 | Pending |
+| ART-02 | Phase 8 | Pending |
+| SVG-01 | Phase 7 | Pending |
+| SVG-02 | Phase 7 | Pending |
+| ARCH-01 | Phase 6 | Pending |
+| ARCH-02 | Phase 6 | Pending |
 
 **Coverage:**
 - v1.1 requirements: 6 total
-- Mapped to phases: 0
-- Unmapped: 6 ⚠️
+- Mapped to phases: 6
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-12*

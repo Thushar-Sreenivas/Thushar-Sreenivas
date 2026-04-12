@@ -3,10 +3,10 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Visual Overhaul
 status: active
-stopped_at: Defining requirements
+stopped_at: Roadmap created
 last_updated: "2026-04-12T10:00:00.000Z"
 progress:
-  total_phases: 0
+  total_phases: 3
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -15,17 +15,17 @@ progress:
 # Project State
 
 ## 🎯 Current Focus
-**Phase**: Not started (defining requirements)
-**Plan**: —
-**Status**: Defining requirements
-**Goal**: Define requirements and roadmap for v1.1 Visual Overhaul
+**Phase**: 6 (Pipeline Foundation)
+**Plan**: Not started
+**Status**: Planning
+**Goal**: The build system successfully processes and validates dark-mode-only visual assets
 
 ## 📍 Position
 
-Phase: Not started (defining requirements)
-Plan: —
-Status: Defining requirements
-Last activity: 2026-04-12 — Milestone v1.1 started
+Phase: 6 (Pipeline Foundation)
+Plan: Not started
+Status: Ready for planning
+Last activity: 2026-04-12 — Roadmap created for v1.1
 
 ## Project Reference
 
@@ -37,12 +37,14 @@ See: .planning/PROJECT.md (updated 2026-04-12)
 ## 🧠 Accumulated Context
 
 ### Roadmap Evolution
+- Started v1.1 Visual Overhaul milestone
+- Phase 6, 7, 8 created to handle Pipeline updates, SVGs, and Algorithmic Background respectively.
 - Phase 05.1 inserted after Phase 05: Refactor README content to exactly match Cover Letter tone (URGENT)
 
 ### Key Decisions
-- Adopted 3-phase structure starting with narrative, moving to visual design, and finalizing with layout/build architecture to ensure the narrative story remains the central priority.
+- Adopted a static asset generation pipeline to bypass GitHub's markdown and proxy constraints.
+- Phase 6 must complete before Phase 7/8 to avoid breaking CI with dark-only assets.
 - Grouped theming and SVGs into one Visual Design System phase to maintain cohesive aesthetic.
-- Drafted Phase 1 Narrative Design Spec and Implementation Plan based on the `Thushar_Sreenivas_Cover_Letter.pdf`.
 - Chose native Node.js asserts over test frameworks like Jest for content verification to keep dependencies zero.
 - Used standard Markdown headings and blockquotes instead of HTML tags for maximum mobile compatibility.
 - [Phase 03] Used robust Regex matching in build-template.js to handle flexible HTML source blocks instead of a full DOM parser.
@@ -57,9 +59,9 @@ See: .planning/PROJECT.md (updated 2026-04-12)
 - None
 
 ### Next Steps
-- Execute `/gsd-new-milestone` to begin the next iteration.
+- Execute `/gsd-plan-phase 6` to plan the first phase.
 
 ## 🔄 Session Continuity
-Last session: 2026-04-12T08:20:00.000Z
-Stopped at: Completed 05.1-01-PLAN.md
+Last session: 2026-04-12
+Stopped at: Roadmap created
 Resume file: None
