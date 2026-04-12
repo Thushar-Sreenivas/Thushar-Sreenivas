@@ -2,65 +2,91 @@
 ### Senior Frontend Engineer · React, TypeScript, R&D, AI Tooling
 
 <div align="center">
-  <img src="assets/hero-light.svg#gh-light-mode-only" width="800" alt="Magic Quote">
-  <img src="assets/hero-dark.svg#gh-dark-mode-only" width="800" alt="Magic Quote">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/hero-banner-dark.svg">
+    <img src="assets/images/hero-banner-light.svg" width="800" alt="Magic Quote">
+  </picture>
 </div>
 
 <div align="center">
-  <img src="assets/divider-light.svg#gh-light-mode-only" width="800" alt="Divider">
-  <img src="assets/divider-dark.svg#gh-dark-mode-only" width="800" alt="Divider">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/divider-dark.svg">
+    <img src="assets/images/divider-light.svg" width="800" alt="Divider">
+  </picture>
 </div>
 
 <div align="center">
-  <img src="assets/header-experience-light.svg#gh-light-mode-only" width="800" alt="Journey & Experience">
-  <img src="assets/header-experience-dark.svg#gh-dark-mode-only" width="800" alt="Journey & Experience">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/header-journey-dark.svg">
+    <img src="assets/images/header-journey-light.svg" width="800" alt="Journey & Experience">
+  </picture>
 </div>
 
-My adventure through the tech landscape has always been driven by a fascination with the spells we weave into reality. 
+I've been coding for 6+ years, and honestly, it's the thing I've consistently been best at. There's something about making code work that still feels like magic to me. I like problems that don't fit neatly into one category.
 
-At **Pencil**, I crafted the core canvas editor, bringing ideas to life using **React** and **TypeScript**. It wasn't just about placing pixels on a screen; it was about building intuitive experiences where users could manipulate space effortlessly. Along the way, I built plugins for **Figma** and **Photoshop** that bridged the gap between design and development, automating away the tedious parts of the creative process.
+Right now I'm on the frontend squad at Pencil. We build the core canvas editor in React and TypeScript... I also shipped TypeScript plugins for Figma and Photoshop.
 
-When I journeyed to **Surge** (Sequoia), the challenge evolved. I architected mobile media experiences with **React Native**, ensuring that performance and fluidity felt completely native to the device. Mobile development taught me that the best magic is the kind users never even notice because it just works perfectly.
+Before Pencil, I shipped a React Native app for Sequoia Capital's Surge accelerator, handling the complex media playback layer.
 
-Later, I delved into the deep backend with **Crypto** vaults, writing robust and highly concurrent systems in **Go**. This taught me the importance of reliability and safety when dealing with complex, high-stakes infrastructure.
+I've also spent time in the backend building robust, highly concurrent systems in Go for Crypto vaults, learning the importance of reliability in high-stakes infrastructure.
 
 <div align="center">
-  <img src="assets/divider-light.svg#gh-light-mode-only" width="800" alt="Divider">
-  <img src="assets/divider-dark.svg#gh-dark-mode-only" width="800" alt="Divider">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/divider-dark.svg">
+    <img src="assets/images/divider-light.svg" width="800" alt="Divider">
+  </picture>
 </div>
 
 <div align="center">
-  <img src="assets/header-tech-light.svg#gh-light-mode-only" width="800" alt="The Grimoire (Tech Stack)">
-  <img src="assets/header-tech-dark.svg#gh-dark-mode-only" width="800" alt="The Grimoire (Tech Stack)">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/header-grimoire-dark.svg">
+    <img src="assets/images/header-grimoire-light.svg" width="800" alt="The Grimoire (Tech Stack)">
+  </picture>
 </div>
 
 <div align="center">
-  <img src="assets/stack-frontend-light.svg#gh-light-mode-only" width="800" alt="Frontend Spells">
-  <img src="assets/stack-frontend-dark.svg#gh-dark-mode-only" width="800" alt="Frontend Spells">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/grimoire-frontend-dark.svg">
+    <img src="assets/images/grimoire-frontend-light.svg" width="800" alt="Frontend Spells">
+  </picture>
   
-  <img src="assets/stack-backend-light.svg#gh-light-mode-only" width="800" alt="Backend Runes">
-  <img src="assets/stack-backend-dark.svg#gh-dark-mode-only" width="800" alt="Backend Runes">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/grimoire-backend-dark.svg">
+    <img src="assets/images/grimoire-backend-light.svg" width="800" alt="Backend Runes">
+  </picture>
   
-  <img src="assets/stack-tooling-light.svg#gh-light-mode-only" width="800" alt="Automation Artifacts">
-  <img src="assets/stack-tooling-dark.svg#gh-dark-mode-only" width="800" alt="Automation Artifacts">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/grimoire-tooling-dark.svg">
+    <img src="assets/images/grimoire-tooling-light.svg" width="800" alt="Automation Artifacts">
+  </picture>
 </div>
 
-Beyond product development, my true passion lies in developer **tooling**, **automation**, and creating **AI** workflows. I love building the tools that help other developers write better code faster. Whether it's crafting sophisticated GitHub Actions to automate CI/CD pipelines or exploring new AI-assisted coding methodologies, I am always expanding my grimoire.
+I love reading documentation, experimenting with new approaches, and building POCs. Honestly, a lot of my best features started as experiments I was running on my own. I also spend a lot of time on AI tooling, developer workflows, and automating things that shouldn't be manual.
 
 <div align="center">
-  <img src="assets/divider-light.svg#gh-light-mode-only" width="800" alt="Divider">
-  <img src="assets/divider-dark.svg#gh-dark-mode-only" width="800" alt="Divider">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/divider-dark.svg">
+    <img src="assets/images/divider-light.svg" width="800" alt="Divider">
+  </picture>
 </div>
 
-## 📫 Send a Raven
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/header-contact-dark.svg">
+    <img src="assets/images/header-contact-light.svg" width="800" alt="Send a Raven">
+  </picture>
+</div>
 
-If you'd like to collaborate, talk about front-end architecture, or share a bit of magic, you can reach me through these channels:
+If you'd like to collaborate, talk about front-end architecture, or discuss developer tooling, you can reach me through these channels:
 
-- Let's connect on [LinkedIn](https://linkedin.com/in/thusharsreenivas)
-- Check out my open-source spells on [GitHub](https://github.com/thusharsreenivas)
-- Or simply send a direct message via [Email](mailto:hello@example.com)
+- Email: [Email](mailto:thusharsreenivas@gmail.com)
+- Website: [Website](https://thusharsreenivas.dev)
+- GitHub: [GitHub](https://github.com/thusharsreenivas)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/thusharsreenivas)
 
 <div align="center">
-  <img src="assets/footer-light.svg#gh-light-mode-only" width="800" alt="Footer">
-  <img src="assets/footer-dark.svg#gh-dark-mode-only" width="800" alt="Footer">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/footer-dark.svg">
+    <img src="assets/images/footer-light.svg" width="800" alt="Footer">
+  </picture>
 </div>
