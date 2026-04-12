@@ -10,5 +10,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.97",
+    "d3-shape": "^3.2.0",
+    "gifenc": "^1.0.3",
+    "satori": "^0.26.0",
+    "satori-html": "^0.3.2",
+    "text-to-svg": "^3.1.5"
+  }
 }
