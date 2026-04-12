@@ -53,7 +53,8 @@
 **Success Criteria**:
 1. A structured algorithmic-art prompt is prepared and ready for the user to execute via Claude Code.
 2. The generated algorithmic GIF/MP4 is embedded in the profile and plays automatically under GitHub's cache limits.
-**Plans**: TBD
+**Plans**: 1 plans
+- [ ] 08-01-PLAN.md — Generate a structured prompt for the `algorithmic-art` skill and prepare the profile template.
 
 ## Progress
 
@@ -67,4 +68,4 @@
 | 05.1. Refactor README content to exactly match Cover Letter tone | v1.0 | 1/1 | Complete | 2026-04-12 |
 | 6. Pipeline Foundation | v1.1 | 0/1 | Not started | - |
 | 7. Thematic Dark SVGs | v1.1 | 0/0 | Not started | - |
-| 8. Algorithmic Background | v1.1 | 0/0 | Not started | - |
+| 8. Algorithmic Background | v1.1 | 0/1 | Not started | - |
