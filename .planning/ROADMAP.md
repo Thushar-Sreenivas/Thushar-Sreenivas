@@ -15,7 +15,7 @@
 | 1. Narrative & Content | 0/1 | Not started | - |
 | 2. Visual Design System | 1/1 | Complete | x |
 | 3. Layout & Architecture | 0/0 | Not started | - |
-| 4. Fix Visual Design System & Pipeline | 0/0 | Not started | - |
+| 4. Fix Visual Design System & Pipeline | 0/1 | Not started | - |
 | 5. Fix Template Architecture & Asset Integration | 0/0 | Not started | - |
 
 ## Phase Details
@@ -65,7 +65,8 @@
 1. Visual language is fully established and verified.
 2. Generic badges are replaced with SVGs.
 3. SVG validation script runs as part of the npm build pipeline.
-**Plans**: 0 plans
+**Plans**: 1 plan
+- [ ] 04-01-PLAN.md — Rewrite SVG verification script to assert Frieren theme constraints and integrate it into the npm build pipeline.
 
 ### Phase 5: Fix Template Architecture & Asset Integration
 **Goal**: Wire generated SVGs to the template, fix picture tags, and ensure the automated README generation flow is functional
