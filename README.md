@@ -30,15 +30,15 @@ I've also spent time in the backend building robust, highly concurrent systems i
 </div>
 
 <div align="center">
-  <img src="assets/images/header-grimoire-dark-only.svg" width="800" alt="The Grimoire (Tech Stack)">
+  <img src="assets/images/header-skills-dark-only.svg" width="800" alt="Technical Skills">
 </div>
 
 <div align="center">
-  <img src="assets/images/grimoire-frontend-dark-only.svg" width="800" alt="Frontend Spells">
+  <img src="assets/images/skill-frontend-dark-only.svg" width="800" alt="Frontend Engineering">
   
-  <img src="assets/images/grimoire-backend-dark-only.svg" width="800" alt="Backend Runes">
+  <img src="assets/images/skill-backend-dark-only.svg" width="800" alt="Backend Engineering">
   
-  <img src="assets/images/grimoire-tooling-dark-only.svg" width="800" alt="Automation Artifacts">
+  <img src="assets/images/skill-tooling-dark-only.svg" width="800" alt="Tooling & Infrastructure">
 </div>
 
 I love reading documentation, experimenting with new approaches, and building POCs. Honestly, a lot of my best features started as experiments I was running on my own. I also spend a lot of time on AI tooling, developer workflows, and automating things that shouldn't be manual.
