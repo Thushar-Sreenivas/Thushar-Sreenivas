@@ -12,7 +12,7 @@
 
 ### Complex SVGs
 
-- [ ] **SVG-01**: Create/find visually stunning, high-quality SVGs for the Frieren dark theme to replace the current ones.
+- [x] **SVG-01**: Create/find visually stunning, high-quality SVGs for the Frieren dark theme to replace the current ones.
 - [x] **SVG-02**: Update the README template to use these new SVGs exclusively for dark theme using `#gh-dark-mode-only`.
 
 ### Architecture Updates
@@ -45,7 +45,7 @@
 |-------------|-------|--------|
 | ART-01 | Phase 8 | Complete |
 | ART-02 | Phase 8 | Complete |
-| SVG-01 | Phase 7 | Pending |
+| SVG-01 | Phase 7 | Complete |
 | SVG-02 | Phase 7 | Complete |
 | ARCH-01 | Phase 6 | Complete |
 | ARCH-02 | Phase 6 | Complete |
