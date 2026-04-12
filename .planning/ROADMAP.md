@@ -73,10 +73,10 @@
 | 8. Algorithmic Background | v1.1 | 0/1 | Not started | - |
 ### Phase 08.1: Update skills in SVGs based on resume without grimoire suffix (INSERTED)
 
-**Goal:** [Urgent work - to be planned]
-**Requirements**: TBD
+**Goal:** Update the programmatic SVG generation to remove "grimoire" terminology and align the displayed technical skills with the resume.
+**Requirements**: REQ-08.1
 **Depends on:** Phase 8
-**Plans:** 0 plans
+**Plans:** 1 plans
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 08.1 to break down)
+- [ ] 08.1-01-PLAN.md — Update SVG skills and terminology
