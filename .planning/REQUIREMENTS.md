@@ -1,78 +1,60 @@
 # Requirements: Thushar's GitHub Profile Readme
 
-**Defined:** 2026-04-11
+**Defined:** 2026-04-12
 **Core Value:** A beautiful, human-centric profile that clearly communicates Thushar's technical depth, curiosity, and product mindset without relying on dry corporate jargon, all while deeply integrating a "Frieren" visual and thematic aesthetic.
 
-## v1 Requirements
+## v1.1 Requirements
 
-Requirements for initial release. Each maps to roadmap phases.
+### Algorithmic Background Art
 
-### Narrative & Copy
+- [ ] **ART-01**: Structure the `algorithmic-art` prompt for the user to run in Claude Code.
+- [ ] **ART-02**: Integrate the generated algorithmic art (GIF/MP4) into the README for dark theme.
 
-- [x] **NARR-01**: Write a Hero/Intro section in a human, jargon-free tone focusing on "code as magic"
-- [x] **NARR-02**: Weave key experiences (Pencil Canvas Editor, Figma/Photoshop plugins, Surge React Native, Crypto Go backend) into a cohesive journey story
-- [x] **NARR-03**: Integrate contact and social links naturally into the narrative structure
+### Complex SVGs
 
-### Visuals & Theming
+- [ ] **SVG-01**: Create/find visually stunning, high-quality SVGs for the Frieren dark theme to replace the current ones.
+- [ ] **SVG-02**: Update the README template to use these new SVGs exclusively for dark theme using `#gh-dark-mode-only`.
 
-- [x] **VISL-01**: Establish "Frieren: Beyond Journey's End" visual language (color palette, typography, thematic headers and dividers)
-- [x] **VISL-02**: Replace generic tech stack badges with custom Frieren-themed SVGs or imagery
+### Architecture Updates
 
-### Technical Showcase
+- [ ] **ARCH-01**: Update `verify-svgs.js` to allow dark-theme-only visual assets.
+- [ ] **ARCH-02**: Ensure the build pipeline supports the new visual assets (SVG, GIF/MP4).
 
-- [x] **TECH-01**: Feature passion for developer tooling, automation (GitHub Actions), and AI workflows as core highlights of the magic journey
+## v1.2 Requirements (Future)
 
-### Structure & Layout
+### Dynamic Stats
 
-- [ ] **LAYT-01**: Implement template-driven architecture (`README.template.md` and build script) for generating final Markdown
-- [ ] **LAYT-02**: Ensure layout is fully responsive and does not break on GitHub Mobile app
-- [ ] **LAYT-03**: Guarantee visual robustness across both Light and Dark mode GitHub settings using `#gh-dark-mode-only` patterns
+- **STAT-01**: Create programmatic dynamic SVGs (using Satori) for personalized stats mapped to Frieren aesthetics.
+- **STAT-02**: Implement GitHub Actions cron job for automated "Grimoire" updates.
 
-## v2 Requirements
+### Interactivity
 
-Deferred to future release. Tracked but not in current roadmap.
-
-### Dynamic Generation
-
-- **DYNA-01**: Implement GitHub Actions cron job for automated "Grimoire" updates (e.g., recent activity, blog posts, or rotating quotes)
-- **DYNA-02**: Create programmatic dynamic SVGs (using Satori) for personalized stats mapped to Frieren aesthetics
-
-### Interactive Elements
-
-- **INTR-01**: Add hover states, clickable spells, or interactive easter eggs using HTML/CSS tricks
+- **INT-01**: Add hover states, clickable spells, or interactive easter eggs using HTML/CSS tricks and Markdown wrappers.
 
 ## Out of Scope
 
-Explicitly excluded. Documented to prevent scope creep.
-
 | Feature | Reason |
 |---------|--------|
-| Generic Shield.io Badges | Clutters visual space, breaks fantasy theme, generic |
-| Dry Resume-style Bullets | Contradicts creative narrative approach |
-| Unstyled GitHub Readme Stats | Default stat cards clash heavily with highly themed profiles |
-| External Backend Server | Over-engineers solution, introduces downtime risk |
+| Light Theme SVGs/GIFs for v1.1 | The current focus is entirely on perfecting the visual aesthetic for the dark theme. Light theme can follow later. |
+| Complex backend infrastructure | Must be hostable entirely within the standard GitHub profile ecosystem. |
+| In-SVG Interactivity | Browser security strips `:hover` and `<a>` tags from SVGs embedded via `<img>`. Must use Markdown wrappers instead. |
 
 ## Traceability
 
-Which phases cover which requirements. Updated during roadmap creation.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| NARR-01 | Phase 1 | Complete |
-| NARR-02 | Phase 1 | Complete |
-| NARR-03 | Phase 1 | Complete |
-| VISL-01 | Phase 4 | Complete |
-| VISL-02 | Phase 4 | Complete |
-| TECH-01 | Phase 1 | Complete |
-| LAYT-01 | Phase 5 | Pending |
-| LAYT-02 | Phase 5 | Pending |
-| LAYT-03 | Phase 5 | Pending |
+| ART-01 | Phase [N] | Pending |
+| ART-02 | Phase [N] | Pending |
+| SVG-01 | Phase [N] | Pending |
+| SVG-02 | Phase [N] | Pending |
+| ARCH-01 | Phase [N] | Pending |
+| ARCH-02 | Phase [N] | Pending |
 
 **Coverage:**
-- v1 requirements: 9 total
-- Mapped to phases: 9
-- Unmapped: 0 ✓
+- v1.1 requirements: 6 total
+- Mapped to phases: 0
+- Unmapped: 6 ⚠️
 
 ---
-*Requirements defined: 2026-04-11*
-*Last updated: 2026-04-11 after initial definition*
+*Requirements defined: 2026-04-12*
+*Last updated: 2026-04-12 after defining v1.1 scope*
