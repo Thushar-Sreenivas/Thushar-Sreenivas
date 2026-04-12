@@ -76,7 +76,7 @@
 **Goal:** Update the programmatic SVG generation to remove "grimoire" terminology and align the displayed technical skills with the resume.
 **Requirements**: REQ-08.1
 **Depends on:** Phase 8
-**Plans:** 1 plans
+**Plans:** 1/1 plans complete
 
 Plans:
 - [ ] 08.1-01-PLAN.md — Update SVG skills and terminology
