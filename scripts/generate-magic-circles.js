@@ -163,8 +163,8 @@ function generateHeroBanner(filename) {
   writeSvg(filename, content);
 }
 
-// Grimoire Generator
-function generateGrimoire(type, filename) {
+// Skill Badge Generator
+function generateSkillBadge(type, filename) {
   const width = 800;
   const height = 150;
   
@@ -174,7 +174,7 @@ function generateGrimoire(type, filename) {
   const cy = 75;
   const r = 60;
   
-  // Specific geometric patterns per grimoire type
+  // Specific geometric patterns per skill badge type
   if (type === 'frontend') {
     // Overlapping triangles
     color = THEME.accent; // teal
@@ -220,7 +220,8 @@ function generateGrimoire(type, filename) {
     `;
   }
   
-  const titlePath = textToSVG.getPath(`Grimoire of ${type.charAt(0).toUpperCase() + type.slice(1)}`, {
+  const displayTitle = type === 'frontend' ? 'Frontend Engineering' : type === 'backend' ? 'Backend Engineering' : 'Tooling & Infrastructure';
+  const titlePath = textToSVG.getPath(displayTitle, {
     x: 280, 
     y: 50, 
     fontSize: 32, 
@@ -228,7 +229,7 @@ function generateGrimoire(type, filename) {
     attributes: { fill: THEME.text }
   });
   
-  const subtitlePath = textToSVG.getPath(type === 'frontend' ? 'React, Vue, Tailwind, D3.js' : type === 'backend' ? 'Node.js, Python, PostgreSQL, Redis' : 'Docker, Git, AWS, CI/CD', {
+  const subtitlePath = textToSVG.getPath(type === 'frontend' ? 'React 18, TypeScript, Redux, Tailwind CSS' : type === 'backend' ? 'Node.js, Go, PostgreSQL, AWS, Redis' : 'GitHub Actions, Vite, Docker, Playwright', {
     x: 280, 
     y: 90, 
     fontSize: 18, 
@@ -336,12 +337,12 @@ function generateFooter(filename) {
 // Generate the specific elements
 generateHeroBanner('hero-banner-dark-only.svg');
 
-['frontend', 'backend', 'tooling'].forEach(spell => {
-  generateGrimoire(spell, `grimoire-${spell}-dark-only.svg`);
+['frontend', 'backend', 'tooling'].forEach(skill => {
+  generateSkillBadge(skill, `skill-${skill}-dark-only.svg`);
 });
 
 generateHeader('The Journey So Far', 'header-journey-dark-only.svg');
-generateHeader('The Grimoire', 'header-grimoire-dark-only.svg');
+generateHeader('Technical Skills', 'header-skills-dark-only.svg');
 generateHeader('Send a Raven', 'header-contact-dark-only.svg');
 
 generateDivider('divider-dark-only.svg');

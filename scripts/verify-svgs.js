@@ -10,11 +10,11 @@ function verifySVGs() {
   const files = fs.readdirSync(ASSETS_DIR).filter(f => f.endsWith('.svg'));
   assert(files.length > 0, 'No SVGs found in assets directory');
 
-  // Assert the existence of at least one generated grimoire-* SVG file
-  // Wait, I noticed earlier the generated assets were "grimoire-frontend-light.svg", etc.
+  // Assert the existence of at least one generated skill-* SVG file
+  // Wait, I noticed earlier the generated assets were "skill-frontend-light.svg", etc.
   assert(
-    files.some(f => f.startsWith('grimoire-')),
-    'Missing required grimoire-* SVG badge replacement files'
+    files.some(f => f.startsWith('skill-')),
+    'Missing required skill-* SVG badge replacement files'
   );
 
   files.forEach(file => {
