@@ -7,8 +7,8 @@
 
 ### Algorithmic Background Art
 
-- [ ] **ART-01**: Structure the `algorithmic-art` prompt for the user to run in Claude Code.
-- [ ] **ART-02**: Integrate the generated algorithmic art (GIF/MP4) into the README for dark theme.
+- [x] **ART-01**: Structure the `algorithmic-art` prompt for the user to run in Claude Code.
+- [x] **ART-02**: Integrate the generated algorithmic art (GIF/MP4) into the README for dark theme.
 
 ### Complex SVGs
 
@@ -43,8 +43,8 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ART-01 | Phase 8 | Pending |
-| ART-02 | Phase 8 | Pending |
+| ART-01 | Phase 8 | Complete |
+| ART-02 | Phase 8 | Complete |
 | SVG-01 | Phase 7 | Pending |
 | SVG-02 | Phase 7 | Pending |
 | ARCH-01 | Phase 6 | Complete |
