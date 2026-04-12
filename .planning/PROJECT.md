@@ -29,11 +29,11 @@ A beautiful, human-centric profile that clearly communicates Thushar's technical
 - ✓ Create a "Frieren" themed visual layout and aesthetic for the README — v1.0
 - ✓ Incorporate dynamic or aesthetic elements (e.g., SVG animations, themed images, or quotes) related to Frieren — v1.0
 - ✓ Ensure layout is fully responsive across both Light and Dark mode GitHub settings using `#gh-dark-mode-only` patterns — v1.0
+- ✓ Complex, high-quality, stunning SVG replacements for dark theme — Phase 07
+- ✓ Algorithmic art background GIF (dark theme) using `algorithmic-art` — Phase 08
 
 ### Active
 
-- [ ] Algorithmic art background GIF (dark theme) using `algorithmic-art`
-- [ ] Complex, high-quality, stunning SVG replacements for dark theme
 - [ ] Create programmatic dynamic SVGs (using Satori) for personalized stats mapped to Frieren aesthetics
 - [ ] Add hover states, clickable spells, or interactive easter eggs using HTML/CSS tricks
 - [ ] Implement GitHub Actions cron job for automated "Grimoire" updates (e.g., recent activity, blog posts, or rotating quotes)
@@ -64,6 +64,10 @@ A beautiful, human-centric profile that clearly communicates Thushar's technical
 | Verification script approach | Chose native Node.js asserts over test frameworks like Jest for content verification to keep dependencies zero. | — Phase 1 |
 | Fail-fast SVG verification | Used Node's native 'assert' module inside 'verify-svgs.js' immediately after 'generate-assets.js' to ensure generated outputs are strictly validated for thematic constraints before template processing. | — Validated |
 | Template building strategy | Standardized `README.template.md` to use pure HTML `<picture>` elements for local authoring ergonomics, converting them to GitHub-proprietary dual-`<img>` syntax via `build-template.js`. | — Validated |
+| Programmatic SVG generation via d3-shape | Used d3-shape's radial lines/arcs to build complex geometric math easily rather than relying on static images. | — Phase 07 |
+| Embedded text paths for SVGs | Avoids GitHub's external font loading proxies by baking the font directly as SVG paths. | — Phase 07 |
+| Universal Dark SVGs | Mapped to `-dark-only` to ensure the complex new SVGs show elegantly regardless of user theme mode. | — Phase 07 |
+| Auto-generated background GIF | Automated headless execution of the interactive `algorithmic-art` prompt to generate the GIF without manual intervention. | — Phase 08 |
 
 ---
-*Last updated: 2026-04-12 after starting v1.1 milestone*
+*Last updated: 2026-04-12 after Phase 08*
