@@ -15,8 +15,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Visuals & Theming
 
-- [ ] **VISL-01**: Establish "Frieren: Beyond Journey's End" visual language (color palette, typography, thematic headers and dividers)
-- [ ] **VISL-02**: Replace generic tech stack badges with custom Frieren-themed SVGs or imagery
+- [x] **VISL-01**: Establish "Frieren: Beyond Journey's End" visual language (color palette, typography, thematic headers and dividers)
+- [x] **VISL-02**: Replace generic tech stack badges with custom Frieren-themed SVGs or imagery
 
 ### Technical Showcase
 
@@ -61,8 +61,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NARR-01 | Phase 1 | Complete |
 | NARR-02 | Phase 1 | Complete |
 | NARR-03 | Phase 1 | Complete |
-| VISL-01 | Phase 4 | Pending |
-| VISL-02 | Phase 4 | Pending |
+| VISL-01 | Phase 4 | Complete |
+| VISL-02 | Phase 4 | Complete |
 | TECH-01 | Phase 1 | Complete |
 | LAYT-01 | Phase 5 | Pending |
 | LAYT-02 | Phase 5 | Pending |
