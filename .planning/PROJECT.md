@@ -8,6 +8,16 @@ An awesome, unique GitHub profile README for Thushar Sreenivas. It translates 6+
 
 A beautiful, human-centric profile that clearly communicates Thushar's technical depth, curiosity, and product mindset without relying on dry corporate jargon, all while deeply integrating a "Frieren" visual and thematic aesthetic.
 
+## Current Milestone: v1.1 Visual Overhaul
+
+**Goal:** Complete overhaul of the profile's visual elements, generating stunning algorithmic art for the background (as a GIF) and creating complex, beautiful SVGs specifically for the dark theme.
+
+**Target features:**
+- Algorithmic art background GIF (dark theme)
+- Complex, high-quality SVG replacements
+- Focus exclusively on dark theme aesthetics for this iteration
+- Structuring the algorithmic-art prompt for you to run in Claude Code
+
 ## Requirements
 
 ### Validated
@@ -22,6 +32,8 @@ A beautiful, human-centric profile that clearly communicates Thushar's technical
 
 ### Active
 
+- [ ] Algorithmic art background GIF (dark theme) using `algorithmic-art`
+- [ ] Complex, high-quality, stunning SVG replacements for dark theme
 - [ ] Create programmatic dynamic SVGs (using Satori) for personalized stats mapped to Frieren aesthetics
 - [ ] Add hover states, clickable spells, or interactive easter eggs using HTML/CSS tricks
 - [ ] Implement GitHub Actions cron job for automated "Grimoire" updates (e.g., recent activity, blog posts, or rotating quotes)
@@ -54,4 +66,4 @@ A beautiful, human-centric profile that clearly communicates Thushar's technical
 | Template building strategy | Standardized `README.template.md` to use pure HTML `<picture>` elements for local authoring ergonomics, converting them to GitHub-proprietary dual-`<img>` syntax via `build-template.js`. | — Validated |
 
 ---
-*Last updated: 2026-04-12 after v1.0 milestone*
+*Last updated: 2026-04-12 after starting v1.1 milestone*
