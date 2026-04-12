@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 60" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="60" fill="#0d1117" />
+    <!-- Left line -->
+    <path d="M 50,30 L 350,30" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.4" />
+    <!-- Central motif -->
+    <g transform="translate(400, 30) rotate(0)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.4" />
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#14b8a6" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.6" />
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.3" />
+    <!-- Outer triangles -->
+    <polygon points="0,-20 17.32,10 -17.32,10" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.5" />
+    <polygon points="0,20 -17.32,-10 17.32,-10" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.5" />
+    <!-- Inner square -->
+    <rect x="-10.600000000000001" y="-10.600000000000001" width="21.200000000000003" height="21.200000000000003" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.4" transform="rotate(45)" />
+    <!-- Central dot -->
+    <circle cx="0" cy="0" r="1" fill="#14b8a6" opacity="0.8" />
+  </g>
+    <circle cx="370" cy="30" r="3" fill="#14b8a6" opacity="0.6" />
+    <circle cx="430" cy="30" r="3" fill="#14b8a6" opacity="0.6" />
+    <!-- Right line -->
+    <path d="M 450,30 L 750,30" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.4" />
+  </svg>
