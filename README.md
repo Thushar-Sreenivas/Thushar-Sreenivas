@@ -50,7 +50,7 @@ I love reading documentation, experimenting with new approaches, and building PO
 
 If you'd like to collaborate, talk about front-end architecture, or discuss developer tooling, you can reach me through these channels:
 
-- Email: [Email](mailto:thusharsreenivas@gmail.com)
-- Website: [Website](https://thusharsreenivas.dev)
-- GitHub: [GitHub](https://github.com/thusharsreenivas)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/thusharsreenivas)
+- Email: [thusharsreenivas@gmail.com](mailto:thusharsreenivas@gmail.com)
+- Website: [thusharsreenivas.dev](https://thusharsreenivas.dev)
+- GitHub: [thusharsreenivas](https://github.com/thusharsreenivas)
+- LinkedIn: [thusharsreenivas](https://linkedin.com/in/thusharsreenivas)
