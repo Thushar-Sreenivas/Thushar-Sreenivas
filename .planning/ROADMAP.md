@@ -34,7 +34,8 @@
 **Success Criteria**:
 1. Validation script (`verify-svgs.js`) passes when visual assets only have dark-theme versions.
 2. Build pipeline correctly recognizes and processes new media formats (GIF/MP4) without failing.
-**Plans**: TBD
+**Plans**: 1 plans
+- [ ] 06-01-PLAN.md — Update build scripts to support dark-theme-only visual assets
 
 ### Phase 7: Thematic Dark SVGs
 **Goal**: Users see beautiful, high-quality Frieren-themed SVGs in the profile dark mode
@@ -64,6 +65,6 @@
 | 4. Fix Visual Design System & Pipeline | v1.0 | 1/1 | Complete | 2026-04-12 |
 | 5. Fix Template Architecture & Asset Integration | v1.0 | 1/1 | Complete | 2026-04-12 |
 | 05.1. Refactor README content to exactly match Cover Letter tone | v1.0 | 1/1 | Complete | 2026-04-12 |
-| 6. Pipeline Foundation | v1.1 | 0/0 | Not started | - |
+| 6. Pipeline Foundation | v1.1 | 0/1 | Not started | - |
 | 7. Thematic Dark SVGs | v1.1 | 0/0 | Not started | - |
 | 8. Algorithmic Background | v1.1 | 0/0 | Not started | - |
