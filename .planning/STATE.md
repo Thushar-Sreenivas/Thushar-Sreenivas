@@ -23,9 +23,9 @@ progress:
 
 ## 📍 Position
 
-Phase: 6 (Pipeline Foundation)
-Plan: Completed
-Status: Ready for next phase
+Phase: 7 (Thematic Dark SVGs)
+Plan: 1 of 2
+Status: In Progress
 Last activity: 2026-04-12 — Executed Phase 6 Plan 1
 
 ## Project Reference
@@ -43,6 +43,9 @@ See: .planning/PROJECT.md (updated 2026-04-12)
 - Phase 05.1 inserted after Phase 05: Refactor README content to exactly match Cover Letter tone (URGENT)
 
 ### Key Decisions
+- [Phase 07] Switched from pre-built SVGs to programmatic generation using d3-shape and text-to-svg
+- [Phase 07] Embedded text as SVG paths to ensure perfect cross-device typography rendering
+- [Phase 07] Adopted universal display of dark-themed SVGs across both light and dark modes
 - [Phase 06] Allowed `-dark-only.svg` naming convention to bypass light-mode variant pairing checks.
 - [Phase 06] Extracted full tags including closing tags when a picture is found lacking source fallbacks in build-template.js.
 - Adopted a static asset generation pipeline to bypass GitHub's markdown and proxy constraints.
