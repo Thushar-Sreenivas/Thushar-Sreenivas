@@ -1,0 +1,11 @@
+node_modules/
+opencode-output*.log
+.DS_Store
+test.html
+test.png
+test.svg
+test2.html
+test2.svg
+test-d3.js
+zoltraak.html
+artifacts/

@@ -2,12 +2,9 @@
 ### Senior Frontend Engineer · React, TypeScript, R&D, AI Tooling
 
 <div align="center">
-  <img src="assets/images/Zoltraak-dark-only.gif#gh-dark-mode-only" width="800" alt="Zoltraak Magic Circles Background">
+  <img src="assets/images/Zoltraak-dark-only.gif" width="800" alt="Zoltraak Magic Circles Background">
 </div>
 
-<div align="center">
-  <img src="assets/images/hero-banner-dark-only.svg" width="800" alt="Magic Quote">
-</div>
 
 <div align="center">
   <img src="assets/images/divider-dark-only.svg" width="800" alt="Divider">
@@ -57,7 +54,3 @@ If you'd like to collaborate, talk about front-end architecture, or discuss deve
 - Website: [Website](https://thusharsreenivas.dev)
 - GitHub: [GitHub](https://github.com/thusharsreenivas)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/thusharsreenivas)
-
-<div align="center">
-  <img src="assets/images/footer-dark-only.svg" width="800" alt="Footer">
-</div>
