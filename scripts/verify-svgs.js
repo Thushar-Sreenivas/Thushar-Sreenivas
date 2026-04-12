@@ -34,7 +34,7 @@ function verifySVGs() {
     if (file.endsWith('-light.svg')) {
       const hasLightColor = /#eab308|#0ea5e9|#bae6fd/i.test(content);
       assert(hasLightColor, `[${file}] Missing required light theme colors (#eab308, #0ea5e9, or #bae6fd)`);
-    } else if (file.endsWith('-dark.svg')) {
+    } else if (file.endsWith('-dark.svg') || file.endsWith('-dark-only.svg')) {
       const hasDarkColor = /#94a3b8|#14b8a6|#581c87/i.test(content);
       assert(hasDarkColor, `[${file}] Missing required dark theme colors (#94a3b8, #14b8a6, or #581c87)`);
     }
