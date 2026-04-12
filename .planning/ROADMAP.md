@@ -6,7 +6,7 @@
 - [ ] **Phase 2: Visual Design System** - Establish the Frieren visual identity and custom themed SVGs
 - [ ] **Phase 3: Layout & Architecture** - Implement template build system and ensure cross-platform responsiveness
 - [ ] **Phase 4: Fix Visual Design System & Pipeline** - Fix visual design integration gaps found in audit
-- [ ] **Phase 5: Fix Template Architecture & Asset Integration** - Fix template architecture and flow gaps found in audit
+- [x] **Phase 5: Fix Template Architecture & Asset Integration** - Fix template architecture and flow gaps found in audit
 
 ## Progress
 
@@ -16,7 +16,7 @@
 | 2. Visual Design System | 1/1 | Complete | x |
 | 3. Layout & Architecture | 0/0 | Not started | - |
 | 4. Fix Visual Design System & Pipeline | 0/1 | Not started | - |
-| 5. Fix Template Architecture & Asset Integration | 0/0 | Not started | - |
+| 5. Fix Template Architecture & Asset Integration | 1/1 | Complete | x |
 
 ## Phase Details
 
@@ -77,4 +77,15 @@
 1. Generated responsive SVGs are used in the template.
 2. The template correctly references `<img>` tags and `build-template.js` correctly transforms them if needed.
 3. Automated README generation flow works flawlessly from end to end.
-**Plans**: 0 plans
+**Plans**: 1 plan
+- [x] 05-01-PLAN.md — Refactor README.template.md and build-template.js
+
+### Phase 05.1: Refactor README content to exactly match Cover Letter tone (INSERTED)
+
+**Goal:** Refactor the text in README.template.md to exactly match the grounded, professional tone of the provided Cover Letter, while preserving all existing SVG layout blocks.
+**Requirements**: NARR-01, NARR-02, NARR-03, TECH-01
+**Depends on:** Phase 5
+**Plans:** 1 plan
+
+Plans:
+- [ ] 05.1-01-PLAN.md — Refactor README text to match Cover Letter tone
