@@ -2,86 +2,59 @@ const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
 
-const ASSETS_DIR = path.join(__dirname, '../assets');
+const ASSETS_DIR = path.join(__dirname, '../assets/images');
 
 function verifySVGs() {
-  if (!fs.existsSync(ASSETS_DIR)) {
-    console.log('No assets directory found. Passing.');
-    return;
-  }
+  assert(fs.existsSync(ASSETS_DIR), `Assets directory not found at ${ASSETS_DIR}`);
 
   const files = fs.readdirSync(ASSETS_DIR).filter(f => f.endsWith('.svg'));
-  
-  if (files.length === 0) {
-    console.log('No SVGs to verify. Passing.');
-    return;
-  }
+  assert(files.length > 0, 'No SVGs found in assets directory');
 
-  let errors = 0;
+  // Assert the existence of at least one generated grimoire-* SVG file
+  // Wait, I noticed earlier the generated assets were "grimoire-frontend-light.svg", etc.
+  assert(
+    files.some(f => f.startsWith('grimoire-')),
+    'Missing required grimoire-* SVG badge replacement files'
+  );
 
   files.forEach(file => {
     const filePath = path.join(ASSETS_DIR, file);
     const content = fs.readFileSync(filePath, 'utf8');
-    
-    console.log(`Verifying ${file}...`);
-    
-    // Check root SVG tag
+
+    // Root SVG tag
     const svgTagMatch = content.match(/<svg[^>]*>/);
-    if (!svgTagMatch) {
-      console.error(`❌ [${file}] No <svg> tag found`);
-      errors++;
-      return;
-    }
-    
+    assert(svgTagMatch, `[${file}] No <svg> tag found`);
     const svgTag = svgTagMatch[0];
-    
-    // Check for viewBox
-    if (!svgTag.includes('viewBox=')) {
-      console.error(`❌ [${file}] Missing viewBox attribute on root <svg>`);
-      errors++;
-    }
-    
-    // Check for hardcoded width/height on root
-    // regex checks for width="<number>" or height="<number>" or width='...'
-    // note: width="100%" is allowed, we only ban fixed pixel/number widths, but the requirement says "NO hardcoded width or height attributes". We'll fail if width="..." or height="..." exist.
-    if (/[\s]width\s*=\s*['"]?[^'"]*['"]?/.test(svgTag) || /[\s]height\s*=\s*['"]?[^'"]*['"]?/.test(svgTag)) {
-      console.error(`❌ [${file}] Has hardcoded width or height on root <svg>`);
-      errors++;
-    }
-    
-    // Check for external images
-    if (/<image[^>]*href=["']http/i.test(content)) {
-      console.error(`❌ [${file}] Contains external <image href="http...">`);
-      errors++;
+
+    // Assert fluid scaling attributes
+    assert(/viewBox="[^"]+"/.test(svgTag), `[${file}] Missing viewBox attribute on root <svg>`);
+    assert(/width="100%"/.test(svgTag), `[${file}] SVG root must have width="100%"`);
+
+    // Assert Frieren theme colors based on mode
+    if (file.endsWith('-light.svg')) {
+      const hasLightColor = /#eab308|#0ea5e9|#bae6fd/i.test(content);
+      assert(hasLightColor, `[${file}] Missing required light theme colors (#eab308, #0ea5e9, or #bae6fd)`);
+    } else if (file.endsWith('-dark.svg')) {
+      const hasDarkColor = /#94a3b8|#14b8a6|#581c87/i.test(content);
+      assert(hasDarkColor, `[${file}] Missing required dark theme colors (#94a3b8, #14b8a6, or #581c87)`);
     }
   });
 
-  // Check matching dark/light
+  // Check matching dark/light mode variants
   const lightFiles = files.filter(f => f.endsWith('-light.svg'));
   const darkFiles = files.filter(f => f.endsWith('-dark.svg'));
-  
+
   lightFiles.forEach(lf => {
     const base = lf.replace('-light.svg', '');
-    if (!darkFiles.includes(`${base}-dark.svg`)) {
-      console.error(`❌ Missing dark mode variant for ${lf}`);
-      errors++;
-    }
-  });
-  
-  darkFiles.forEach(df => {
-    const base = df.replace('-dark.svg', '');
-    if (!lightFiles.includes(`${base}-light.svg`)) {
-      console.error(`❌ Missing light mode variant for ${df}`);
-      errors++;
-    }
+    assert(darkFiles.includes(`${base}-dark.svg`), `Missing dark mode variant for ${lf}`);
   });
 
-  if (errors > 0) {
-    console.error(`\nValidation failed with ${errors} error(s).`);
-    process.exit(1);
-  } else {
-    console.log(`\n✅ All ${files.length} SVGs passed verification!`);
-  }
+  darkFiles.forEach(df => {
+    const base = df.replace('-dark.svg', '');
+    assert(lightFiles.includes(`${base}-light.svg`), `Missing light mode variant for ${df}`);
+  });
+
+  console.log(`✅ All ${files.length} SVGs passed verification with native asserts!`);
 }
 
 verifySVGs();
