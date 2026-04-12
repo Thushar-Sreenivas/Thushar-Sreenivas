@@ -12,15 +12,14 @@ A beautiful, human-centric profile that clearly communicates Thushar's technical
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Write the introduction and "About Me" section using a human, narrative tone mirroring Thushar's cover letter — Phase 1
+- ✓ Highlight key experiences: Pencil (Canvas Editor, Figma/Photoshop plugins, WebCodecs), Surge (React Native), and Crypto backend (Go) — Phase 1
+- ✓ Feature Thushar's passion for developer tooling, automation, and AI workflows — Phase 1
+- ✓ Include technical skills section (React, TypeScript, Go, etc.) without making it a dry list — Phase 1
 
 ### Active
 
 - [ ] Create a "Frieren" themed visual layout and aesthetic for the README
-- [ ] Write the introduction and "About Me" section using a human, narrative tone mirroring Thushar's cover letter
-- [ ] Highlight key experiences: Pencil (Canvas Editor, Figma/Photoshop plugins, WebCodecs), Surge (React Native), and Crypto backend (Go)
-- [ ] Feature Thushar's passion for developer tooling, automation, and AI workflows
-- [ ] Include technical skills section (React, TypeScript, Go, etc.) without making it a dry list
 - [ ] Incorporate dynamic or aesthetic elements (e.g., SVG animations, themed images, or quotes) related to Frieren
 
 ### Out of Scope
@@ -45,7 +44,8 @@ A beautiful, human-centric profile that clearly communicates Thushar's technical
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
 | "Frieren" Theme Integration | Creates a memorable, magical aesthetic that aligns with Thushar's view of coding as "magic". | — Pending |
-| Narrative-first approach | Avoids standard jargon and makes the profile read like a personal letter, matching the cover letter's strength. | — Pending |
+| Narrative-first approach | Avoids standard jargon and makes the profile read like a personal letter, matching the cover letter's strength. | — Validated |
+| Verification script approach | Chose native Node.js asserts over test frameworks like Jest for content verification to keep dependencies zero. | — Phase 1 |
 
 ---
-*Last updated: 2026-04-11 after initialization*
+*Last updated: 2026-04-11 after Phase 1*
