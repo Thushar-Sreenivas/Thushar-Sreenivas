@@ -5,6 +5,8 @@
 - [ ] **Phase 1: Narrative & Content** - Write the human, jargon-free story of Thushar's technical journey
 - [ ] **Phase 2: Visual Design System** - Establish the Frieren visual identity and custom themed SVGs
 - [ ] **Phase 3: Layout & Architecture** - Implement template build system and ensure cross-platform responsiveness
+- [ ] **Phase 4: Fix Visual Design System & Pipeline** - Fix visual design integration gaps found in audit
+- [ ] **Phase 5: Fix Template Architecture & Asset Integration** - Fix template architecture and flow gaps found in audit
 
 ## Progress
 
@@ -13,6 +15,8 @@
 | 1. Narrative & Content | 0/1 | Not started | - |
 | 2. Visual Design System | 1/1 | Complete | x |
 | 3. Layout & Architecture | 0/0 | Not started | - |
+| 4. Fix Visual Design System & Pipeline | 0/0 | Not started | - |
+| 5. Fix Template Architecture & Asset Integration | 0/0 | Not started | - |
 
 ## Phase Details
 
@@ -51,3 +55,25 @@
 **Plans**: 2 plans
 - [ ] 03-01-PLAN.md — Build Pipeline & Responsive Assets
 - [ ] 03-02-PLAN.md — CI Automation & Final Verification
+
+### Phase 4: Fix Visual Design System & Pipeline
+**Goal**: Integrate the visual design system properly and add verification script to build pipeline
+**Depends on**: Phase 2
+**Requirements**: VISL-01, VISL-02
+**Gap Closure**: Closes gaps from audit (Integration Phase 2 -> Build Pipeline)
+**Success Criteria**:
+1. Visual language is fully established and verified.
+2. Generic badges are replaced with SVGs.
+3. SVG validation script runs as part of the npm build pipeline.
+**Plans**: 0 plans
+
+### Phase 5: Fix Template Architecture & Asset Integration
+**Goal**: Wire generated SVGs to the template, fix picture tags, and ensure the automated README generation flow is functional
+**Depends on**: Phase 3, Phase 4
+**Requirements**: LAYT-01, LAYT-02, LAYT-03
+**Gap Closure**: Closes gaps from audit (Integration Phase 3 -> Phase 1/2, Phase 3 -> Phase 2, Flow: Automated README Generation)
+**Success Criteria**:
+1. Generated responsive SVGs are used in the template.
+2. The template correctly references `<img>` tags and `build-template.js` correctly transforms them if needed.
+3. Automated README generation flow works flawlessly from end to end.
+**Plans**: 0 plans

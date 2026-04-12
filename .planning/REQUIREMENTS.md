@@ -24,9 +24,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Structure & Layout
 
-- [x] **LAYT-01**: Implement template-driven architecture (`README.template.md` and build script) for generating final Markdown
-- [x] **LAYT-02**: Ensure layout is fully responsive and does not break on GitHub Mobile app
-- [x] **LAYT-03**: Guarantee visual robustness across both Light and Dark mode GitHub settings using `#gh-dark-mode-only` patterns
+- [ ] **LAYT-01**: Implement template-driven architecture (`README.template.md` and build script) for generating final Markdown
+- [ ] **LAYT-02**: Ensure layout is fully responsive and does not break on GitHub Mobile app
+- [ ] **LAYT-03**: Guarantee visual robustness across both Light and Dark mode GitHub settings using `#gh-dark-mode-only` patterns
 
 ## v2 Requirements
 
@@ -61,12 +61,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NARR-01 | Phase 1 | Complete |
 | NARR-02 | Phase 1 | Complete |
 | NARR-03 | Phase 1 | Complete |
-| VISL-01 | Phase 2 | Pending |
-| VISL-02 | Phase 2 | Pending |
+| VISL-01 | Phase 4 | Pending |
+| VISL-02 | Phase 4 | Pending |
 | TECH-01 | Phase 1 | Complete |
-| LAYT-01 | Phase 3 | Complete |
-| LAYT-02 | Phase 3 | Complete |
-| LAYT-03 | Phase 3 | Complete |
+| LAYT-01 | Phase 5 | Pending |
+| LAYT-02 | Phase 5 | Pending |
+| LAYT-03 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 9 total
